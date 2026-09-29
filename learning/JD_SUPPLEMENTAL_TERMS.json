@@ -1,0 +1,29 @@
+{
+  "snapshot_date": "2026-09-30",
+  "terms": [
+    {"term":"CloudHealth","source_vacancies":["MY-FE-0002","MY-FE-0003","MY-FE-0007","MY-FE-0009"],"category":"finops_platform","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Apptio","source_vacancies":["MY-FE-0002","MY-FE-0007","MY-FE-0009"],"category":"finops_platform","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Cloudability","source_vacancies":["MY-FE-0002","MY-FE-0007","MY-FE-0009"],"category":"finops_platform","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Flexera","source_vacancies":["MY-FE-0002","MY-FE-0009"],"category":"finops_platform","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Finout","source_vacancies":["MY-FE-0007"],"category":"finops_platform","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Kubecost","source_vacancies":["MY-FE-0003"],"category":"kubernetes_finops","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Grafana","source_vacancies":["MY-FE-0002","MY-FE-0009"],"category":"observability","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"QuickSight","source_vacancies":["MY-FE-0002","MY-FE-0009"],"category":"bi","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"OCI Analytics","source_vacancies":["MY-FE-0002","MY-FE-0009"],"category":"bi","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"BigQuery","source_vacancies":["MY-FE-0003"],"category":"gcp_data","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"AWS CUR","source_vacancies":["MY-FE-0003","MY-FE-0006"],"category":"billing_source","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Azure Billing APIs","source_vacancies":["MY-FE-0006"],"category":"billing_source","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"AI token cost management","source_vacancies":["MY-FE-0006"],"category":"ai_finops","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"TCO","source_vacancies":["MY-FE-0008"],"category":"financial_modelling","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"ROI","source_vacancies":["MY-FE-0008"],"category":"financial_modelling","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"financial modelling","source_vacancies":["MY-FE-0006","MY-FE-0008","MY-FE-0009"],"category":"financial_modelling","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"business cases","source_vacancies":["MY-FE-0006","MY-FE-0008"],"category":"financial_modelling","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Spot","source_vacancies":["MY-FE-0001"],"category":"rate_capacity_strategy","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Helm","source_vacancies":["MY-FE-0003"],"category":"kubernetes_delivery","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"GitOps","source_vacancies":["MY-FE-0003"],"category":"kubernetes_delivery","learning_status":"COMPLETE","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"PMP","source_vacancies":["MY-FE-0008"],"category":"project_management_certification","learning_status":"REFERENCE_ONLY","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"PRINCE2","source_vacancies":["MY-FE-0008"],"category":"project_management_certification","learning_status":"REFERENCE_ONLY","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Agile","source_vacancies":["MY-FE-0001"],"category":"delivery_method","learning_status":"REFERENCE_ONLY","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"},
+    {"term":"Scrum","source_vacancies":["MY-FE-0001"],"category":"delivery_method","learning_status":"REFERENCE_ONLY","artifact":"docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md"}
+  ]
+}
