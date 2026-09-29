@@ -1,0 +1,55 @@
+name: Book Source Extraction
+
+on:
+  push:
+    branches:
+      - checkpoint-2/market-knowledge-map
+    paths:
+      - 'python/book_extractor/**'
+      - 'research/books/cloud_finops_2e/source/book_structure.json.gz.b64'
+      - '.github/workflows/book-source-extract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-book-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate textbook source scaffolds
+        run: |
+          python python/book_extractor/extract_cloud_finops_book.py \
+            --manifest-b64-gzip research/books/cloud_finops_2e/source/book_structure.json.gz.b64 \
+            --out research/books/cloud_finops_2e \
+            --expect-chapters 27
+
+      - name: Validate generated structure
+        run: |
+          python -m unittest tests.test_book_source_structure -v
+
+      - name: Commit generated textbook artifacts
+        shell: bash
+        run: |
+          if git diff --quiet -- research/books/cloud_finops_2e; then
+            echo "Generated textbook artifacts are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/books/cloud_finops_2e/BOOK_SOURCE_OF_TRUTH.md \
+                  research/books/cloud_finops_2e/book_manifest.json \
+                  research/books/cloud_finops_2e/chapter_index.csv \
+                  research/books/cloud_finops_2e/chapters
+          git commit -m "Generate Cloud FinOps textbook source scaffolds [skip ci]"
+          git push
