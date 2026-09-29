@@ -6,8 +6,8 @@
   "malaysia_verified": true,
   "job_url": "https://malaysia.indeed.com/viewjob?jk=a88eab18260c9771",
   "source": "Indeed - Encora",
-  "status_evidence": "Indeed and a contemporaneous Jora index displayed the Kuala Lumpur role as an active contract vacancy.",
+  "status_evidence": "Indeed displayed the Kuala Lumpur role as an active vacancy. Dedicated revalidation also found the same composite title on Maukerja, while an Encora recruiter post independently listed a Kuala Lumpur FinOps Engineer opening.",
   "title_evidence": "Observed title is Cloud Project Manager – FinOps engineer, containing the contiguous phrase FinOps engineer.",
   "location_evidence": "Observed location is Kuala Lumpur, Malaysia.",
-  "notes": "Included under the locked contiguous-title rule even though the title also contains Cloud Project Manager."
+  "notes": "Included under the locked contiguous-title rule even though the title also contains Cloud Project Manager. Cross-source support comes from Indeed, Maukerja and a separate Encora recruiter hiring post."
 }
