@@ -6,8 +6,8 @@
   "malaysia_verified": true,
   "job_url": "https://jobs.exxonmobil.com/job/Kuala-Lumpur-FinOps-Engineer-Fede-50088/1384826700/",
   "source": "ExxonMobil Careers",
-  "status_evidence": "Official ExxonMobil job page displayed an Apply now action when checked.",
+  "status_evidence": "Official ExxonMobil job page displayed an Apply now action when checked. Dedicated revalidation also found the same Kuala Lumpur FinOps Engineer on Indeed and JobStreet.",
   "title_evidence": "Official page heading is FinOps Engineer.",
   "location_evidence": "Official page lists Kuala Lumpur, Federal Territory of Kuala Lumpur, MY 50088.",
-  "notes": "Official employer source used as canonical evidence. Long job-description text is paraphrased in raw fields rather than copied verbatim."
+  "notes": "Official employer source used as canonical evidence. Indeed and JobStreet independently corroborate the same exact title/location during the dedicated 2026-09-30 source pass. Long job-description text is paraphrased in raw fields rather than copied verbatim."
 }
