@@ -12,7 +12,7 @@
   "industry": "Video game commerce technology",
   "company_type": "Technology company",
   "role_summary": "Senior FinOps role leading cloud and infrastructure financial management across GCP, AWS and on-prem environments, with Kuala Lumpur included in the hiring locations.",
-  "responsibility_text": "Cloud cost optimization across GCP, AWS and on-prem; compute, storage, network and Kubernetes usage analysis; forecasting and cost dashboards; tagging, budgeting and governance; architecture and workload-placement decisions; rightsizing, reservation planning and autoscaling; anomaly detection, usage attribution and FinOps reviews.",
+  "responsibility_text": "Cloud cost optimization across GCP, AWS and on-prem; compute, storage, network and Kubernetes usage analysis; forecasting and cost dashboards; tagging, budgeting and governance; architecture and workload-placement decisions; rightsizing, reservation planning and autoscaling; anomaly detection, usage attribution and FinOps reviews. Partner with Engineering team, Product team and Finance team on architecture, scaling and cost decisions.",
   "requirement_text": "GCP and AWS; Kubernetes; GCP billing exports, BigQuery, AWS CUR, Kubecost and CloudHealth; SQL-based pipelines; forecasting models; engineering, product and Finance collaboration.",
   "preferred_text": "GCP or AWS professional-level certification; FinOps Certified Practitioner; chargeback/showback; Terraform, Helm or GitOps; data analytics, cloud architecture or financial modelling.",
   "manual_overrides": {

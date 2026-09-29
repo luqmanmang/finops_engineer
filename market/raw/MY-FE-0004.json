@@ -12,7 +12,7 @@
   "industry": "Recruitment / medical and travel security client",
   "company_type": "Recruitment agency posting for client",
   "role_summary": "Cloud FinOps Engineer role for a global medical and travel security organization, focused on AWS and Azure cost strategy, governance and executive visibility.",
-  "responsibility_text": "Multi-cloud cost visibility; cost allocation and tagging; rate optimization; Savings Plans and Reserved Instances; idle resource cleanup; forecasting and budget variance; anomaly detection; cloud governance and leadership recommendations.",
+  "responsibility_text": "Multi-cloud cost visibility; cost allocation and tagging; rate optimization; Savings Plans and Reserved Instances; idle resource cleanup; forecasting and budget variance; anomaly detection; cloud governance and leadership recommendations. Partner with Finance team (FP&A), Engineering team and Product team on forecasting and investment decisions.",
   "requirement_text": "AWS CUR, Azure Billing APIs, SQL, Python, Power BI or Tableau; AWS and Azure pricing; cloud architecture translated into financial business impact; financial modelling.",
   "preferred_text": "FinOps Certified Practitioner or FinOps Certified Engineer; AWS Certified Cloud Practitioner; Azure Fundamentals AZ-900.",
   "manual_overrides": {}

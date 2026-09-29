@@ -83,16 +83,25 @@ The canonical population contains only records with matching evidence confirming
 
 | stakeholder | Count | % |
 |---|---:|---:|
+| finance | 4 | 100.00 |
+| business_units | 3 | 75.00 |
+| engineering | 3 | 75.00 |
 | management | 3 | 75.00 |
-| finance | 1 | 25.00 |
 | procurement_stakeholder | 1 | 25.00 |
-| business_units | 0 | 0.00 |
-| engineering | 0 | 0.00 |
 | vendor_management_stakeholder | 0 | 0.00 |
 
 ## Certification demand
 
-_Not automatically inferred by this pipeline yet. Certification claims require explicit source-backed extraction during market review._
+| certification | Count | % |
+|---|---:|---:|
+| finops_practitioner | 4 | 100.00 |
+| aws_certification | 2 | 50.00 |
+| azure_certification | 2 | 50.00 |
+| finops_engineer_certification | 1 | 25.00 |
+| gcp_certification | 1 | 25.00 |
+| power_bi_certification | 1 | 25.00 |
+| security_certification | 1 | 25.00 |
+| finops_professional | 0 | 0.00 |
 
 ## Recurring interview-risk areas
 

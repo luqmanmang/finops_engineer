@@ -59,6 +59,22 @@ class MarketCensusUnitTests(unittest.TestCase):
         self.assertTrue(signals["multi_cloud"])
         self.assertIn("oci", market_census.DERIVED_OUTPUTS["cloud_frequency.csv"][1])
 
+    def test_certification_taxonomy_is_source_backed(self):
+        taxonomy = market_census.load_json(market_census.TAXONOMY_PATH)
+        fields, keywords, groups = market_census.flatten_taxonomy(taxonomy)
+        record = {
+            "role_summary": "",
+            "responsibility_text": "",
+            "requirement_text": "",
+            "preferred_text": "FinOps Certified Practitioner and Azure Fundamentals AZ-900.",
+            "manual_overrides": {},
+        }
+        signals = market_census.classify(record, fields, keywords)
+        self.assertTrue(signals["finops_practitioner"])
+        self.assertTrue(signals["azure_certification"])
+        self.assertIn("certification", groups)
+        self.assertIn("certification_frequency.csv", market_census.DERIVED_OUTPUTS)
+
     def test_eligibility_requires_evidence(self):
         raw = {
             "active_status": True,

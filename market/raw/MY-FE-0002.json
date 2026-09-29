@@ -12,7 +12,7 @@
   "industry": "IT services and consulting",
   "company_type": "Global technology services company",
   "role_summary": "FinOps role for an insurance environment covering AWS, OCI and hybrid cloud cost management with automation, reporting and governance.",
-  "responsibility_text": "Cloud cost analysis and cost visibility; rightsizing, Reserved Instances, autoscaling and storage lifecycle; cost anomaly management; tagging, chargeback, showback and cost allocation; budgeting, forecasting and reconciliation; cost-efficient architecture; unit economics and leadership reporting.",
+  "responsibility_text": "Cloud cost analysis and cost visibility; rightsizing, Reserved Instances, autoscaling and storage lifecycle; cost anomaly management; tagging, chargeback, showback and cost allocation; budgeting, forecasting and reconciliation; cost-efficient architecture; unit economics and leadership reporting. Partner with Cloud Engineering team, Finance team, Security and Application teams, Product Owners and Business Managers.",
   "requirement_text": "AWS and OCI pricing and billing; Python automation and API integrations; Terraform; CI/CD cost policy controls; Power BI, Grafana, QuickSight or OCI Analytics; multi-cloud cost tools including CloudHealth, Apptio, Flexera and Cloudability.",
   "preferred_text": "FinOps Certified Practitioner or Professional; AWS Cloud Financial Management; Azure Cost Management; Google Cloud Digital Leader; CCSP; Power BI Data Analyst Associate.",
   "manual_overrides": {
