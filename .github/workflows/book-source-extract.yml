@@ -36,7 +36,7 @@ jobs:
 
       - name: Validate generated structure
         run: |
-          python -m unittest tests.test_book_source_structure -v
+          python -m unittest discover -s tests -p 'test_book_source_structure.py' -v
 
       - name: Commit generated textbook artifacts
         shell: bash
