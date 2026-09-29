@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0006",
+  "company": "International SOS",
+  "job_title": "FinOps Engineer",
+  "seniority": "Not specified",
+  "location": "Kuala Lumpur, Malaysia",
+  "employment_type": "Full-time",
+  "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-international-sos-4438153155",
+  "source": "LinkedIn - International SOS",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "Health and security services",
+  "company_type": "Direct employer",
+  "role_summary": "FinOps Engineer role connecting Engineering, Finance and Product teams to improve AWS and Azure cloud economics, cost visibility and financial governance.",
+  "responsibility_text": "Multi-cloud cost visibility; AI token cost management; cost allocation and tagging; Savings Plans and Reserved Instances; waste elimination; weekly and monthly forecasting; anomaly detection; investment advisory. Partner with Finance, Engineering, Product and DevOps stakeholders.",
+  "requirement_text": "AWS CUR, Azure Billing APIs, SQL, Python, Power BI or Tableau; AWS and Azure pricing models; technical architecture translated into financial impact; financial modelling and business cases.",
+  "preferred_text": "FinOps Certified Practitioner or FinOps Certified Engineer; AWS Certified Cloud Practitioner; Microsoft Azure Fundamentals AZ-900.",
+  "manual_overrides": {}
+}
