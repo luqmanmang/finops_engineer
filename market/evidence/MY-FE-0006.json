@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0006",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-international-sos-4438153155",
+  "source": "LinkedIn - International SOS",
+  "status_evidence": "LinkedIn displayed the current FinOps Engineer vacancy for International SOS in Kuala Lumpur without a no-longer-accepting notice; multiple contemporaneous job indexes also showed it as open.",
+  "title_evidence": "Observed title is FinOps Engineer.",
+  "location_evidence": "Observed location is Kuala Lumpur, Malaysia.",
+  "notes": "Direct-employer posting is treated as canonical for this underlying role; JobScoper agency postings with materially identical role content are treated as duplicate syndication evidence."
+}
