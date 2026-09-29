@@ -1,0 +1,88 @@
+name: Checkpoint 1 Expanded Census Build
+
+on:
+  push:
+    branches:
+      - checkpoint-1/market-census-2026-09-30
+    paths:
+      - '.github/workflows/checkpoint1-expand.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-build-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: checkpoint-1/market-census-2026-09-30
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Add duplicate-vacancy contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          schema_path = Path('market/schemas/evidence_schema.json')
+          schema = json.loads(schema_path.read_text(encoding='utf-8'))
+          props = schema['properties']
+          props['duplicate_of'] = {'type': ['string', 'null'], 'pattern': '^MY-FE-[0-9]{4}$'}
+          props['duplicate_reason'] = {'type': ['string', 'null']}
+          schema_path.write_text(json.dumps(schema, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          builder = Path('python/market_census/build_market_census.py')
+          text = builder.read_text(encoding='utf-8')
+
+          anchor = '    if record.get("job_url") and not valid_url(record["job_url"]):\n        errors.append(f"{path}: invalid job_url")\n    for field in ["active_status", "title_verified", "malaysia_verified"]:\n'
+          if 'duplicate_of must be a valid vacancy_id' not in text:
+              replacement = '    if record.get("job_url") and not valid_url(record["job_url"]):\n        errors.append(f"{path}: invalid job_url")\n    if record.get("duplicate_of"):\n        if not ID_RE.fullmatch(str(record["duplicate_of"])):\n            errors.append(f"{path}: duplicate_of must be a valid vacancy_id")\n        if record.get("duplicate_of") == record.get("vacancy_id"):\n            errors.append(f"{path}: duplicate_of cannot reference itself")\n    if "duplicate_reason" in record and record.get("duplicate_reason") not in (None, "") and not isinstance(record.get("duplicate_reason"), str):\n        errors.append(f"{path}: duplicate_reason must be a string or null")\n    for field in ["active_status", "title_verified", "malaysia_verified"]:\n'
+              assert anchor in text, 'evidence validation anchor not found'
+              text = text.replace(anchor, replacement)
+
+          anchor = '    if not evidence.get("malaysia_verified"):\n        reasons.append("malaysia_not_verified")\n    if raw.get("job_url") != evidence.get("job_url"):\n'
+          if 'duplicate_underlying_vacancy' not in text:
+              replacement = '    if not evidence.get("malaysia_verified"):\n        reasons.append("malaysia_not_verified")\n    if evidence.get("duplicate_of"):\n        reasons.append("duplicate_underlying_vacancy")\n    if raw.get("job_url") != evidence.get("job_url"):\n'
+              assert anchor in text, 'eligibility anchor not found'
+              text = text.replace(anchor, replacement)
+
+          old = '            rejected.append({"vacancy_id": raw["vacancy_id"], "job_url": raw.get("job_url"), "reasons": reasons})\n            continue\n'
+          if 'rejected_entry["duplicate_of"]' not in text:
+              new = '            rejected_entry = {"vacancy_id": raw["vacancy_id"], "job_url": raw.get("job_url"), "reasons": reasons}\n            if evidence and evidence.get("duplicate_of"):\n                rejected_entry["duplicate_of"] = evidence.get("duplicate_of")\n            rejected.append(rejected_entry)\n            continue\n'
+              assert old in text, 'rejected-record anchor not found'
+              text = text.replace(old, new)
+          builder.write_text(text, encoding='utf-8')
+
+          tests = Path('tests/test_market_census.py')
+          test_text = tests.read_text(encoding='utf-8')
+          if 'test_duplicate_underlying_vacancy_is_rejected' not in test_text:
+              marker = '    def test_duplicate_url_is_rejected(self):\n'
+              addition = '''    def test_duplicate_underlying_vacancy_is_rejected(self):\n        raw = {\n            "active_status": True,\n            "job_title": "Cloud FinOps Engineer",\n            "job_url": "https://example.com/agency",\n            "source": "Agency",\n        }\n        evidence = {\n            "active_status": True,\n            "title_verified": True,\n            "malaysia_verified": True,\n            "job_url": "https://example.com/agency",\n            "source": "Agency",\n            "duplicate_of": "MY-FE-0006",\n        }\n        self.assertIn("duplicate_underlying_vacancy", market_census.eligibility_reasons(raw, evidence))\n\n'''
+              assert marker in test_text, 'duplicate-test insertion marker not found'
+              test_text = test_text.replace(marker, addition + marker)
+              tests.write_text(test_text, encoding='utf-8')
+          PY
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Build market outputs
+        run: make market-build
+
+      - name: Validate expanded census
+        run: make market-check
+
+      - name: Commit expanded census outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market python/market_census/build_market_census.py tests/test_market_census.py docs/MARKET_ANALYSIS.md
+          git commit -m "Expand Checkpoint 1 verified census"
+          git push origin HEAD:checkpoint-1/market-census-2026-09-30
