@@ -9,5 +9,7 @@
   "status_evidence": "LinkedIn listing displayed an Apply action and was surfaced as a current posting when checked.",
   "title_evidence": "Listing title is Cloud FinOps Engineer, which contains the contiguous phrase FinOps Engineer.",
   "location_evidence": "Listing location is Kuala Lumpur, Malaysia.",
-  "notes": "Multiple syndications with substantially identical content were treated as one underlying vacancy to avoid double counting."
+  "duplicate_of": "MY-FE-0006",
+  "duplicate_reason": "Agency posting explicitly describes a global medical and travel security services client and materially matches the direct International SOS FinOps Engineer vacancy across AWS/Azure visibility, AI token management, tagging, rate optimization, forecasting and anomaly detection.",
+  "notes": "Retained as active audit evidence but excluded from canonical market frequency counts to avoid double counting one underlying vacancy."
 }
