@@ -19,7 +19,7 @@ Discovery used repeated broad public-web searches and direct verification agains
 
 The search pass covered official employer career pages plus indexed sources including LinkedIn, Indeed, JobStreet, Jora, Maukerja, Ricebowl and other regional job indexes. Company/recruiter-specific searches were also used after candidate discovery. Results were reconciled by employer, requisition/job ID, title, location and materially matching role content so mirrors were not counted as independent demand.
 
-A dedicated cross-source recheck was then run for **JobStreet Malaysia, Indeed Malaysia, Google Careers and Google-indexed public-web results**. Its evidence matrix is stored in `market/SOURCE_CROSSCHECK_2026-09-30.md`. This pass confirmed that platform absence is not equivalent to vacancy inactivity and that different FinOps requisitions from the same employer must not be silently conflated.
+A dedicated cross-source recheck was then run for **JobStreet Malaysia, Indeed Malaysia, Google Careers and Google-indexed public-web results**. Human-readable findings are stored in `market/SOURCE_CROSSCHECK_2026-09-30.md`; the machine-readable companion is `market/source_crosscheck_matrix.csv`. This pass confirmed that platform absence is not equivalent to vacancy inactivity and that different FinOps requisitions from the same employer must not be silently conflated.
 
 Every canonical vacancy requires a matching record under `market/evidence/` confirming active state, title and Malaysia scope at the collection snapshot.
 
@@ -27,13 +27,13 @@ Every canonical vacancy requires a matching record under `market/evidence/` conf
 
 | ID | Company | Observed title | Primary verification source |
 |---|---|---|---|
-| MY-FE-0001 | ExxonMobil | FinOps Engineer | ExxonMobil Careers — Kuala Lumpur |
-| MY-FE-0002 | NTT DATA Services | FinOps Engineer | NTT DATA Careers / JobStreet — Kuala Lumpur |
-| MY-FE-0003 | Xsolla | FinOps engineer | Xsolla Lever Careers — Kuala Lumpur among hiring locations |
+| MY-FE-0001 | ExxonMobil | FinOps Engineer | ExxonMobil Careers — Kuala Lumpur; corroborated by Indeed and JobStreet |
+| MY-FE-0002 | NTT DATA Services | FinOps Engineer | NTT DATA Careers — Req ID 387488; corroborated by LinkedIn and JobStreet |
+| MY-FE-0003 | Xsolla | FinOps engineer | Xsolla Lever Careers — corroborated by Indeed and LinkedIn |
 | MY-FE-0006 | International SOS | FinOps Engineer | LinkedIn direct-employer posting — Kuala Lumpur; public employer-careers visibility conflict documented |
-| MY-FE-0007 | Coforge | FinOps Engineer | Direct LinkedIn job ID 4445718197 — Kuala Lumpur; Indeed has a separate FinOps Analyst requisition |
-| MY-FE-0008 | Encora | Cloud Project Manager – FinOps engineer | Current regional job-board listing — Kuala Lumpur |
-| MY-FE-0009 | Softenger | FinOps Engineer | Current regional listing + Softenger recruiter signal — Kuala Lumpur |
+| MY-FE-0007 | Coforge | FinOps Engineer | Direct LinkedIn job ID `4445718197` — live Apply, Kuala Lumpur |
+| MY-FE-0008 | Encora | Cloud Project Manager – FinOps engineer | Indeed — corroborated by Maukerja and an Encora recruiter FinOps hiring post |
+| MY-FE-0009 | Softenger | FinOps Engineer | GetMalaysiaJobs Apply Now — corroborated by a Softenger Malaysia recruiter post |
 
 ## Rejected / non-canonical records
 
@@ -44,12 +44,14 @@ Every canonical vacancy requires a matching record under `market/evidence/` conf
 
 ## De-duplication decisions
 
-- **International SOS / JobScoper:** the agency post explicitly describes a global medical and travel security services client and materially matches the direct International SOS role. International SOS is canonical; JobScoper is retained as `duplicate_of = MY-FE-0006`. The dedicated recheck found that International SOS's public careers list did not surface the role while LinkedIn still surfaced the exact-title requisition, so this source-visibility conflict is recorded rather than hidden.
+- **International SOS / JobScoper:** the agency post explicitly describes a global medical and travel security services client and materially matches the direct International SOS role. International SOS is canonical; JobScoper is retained as `duplicate_of = MY-FE-0006`. The dedicated recheck found that International SOS's public careers list did not surface the role while LinkedIn-related results still surfaced the exact-title requisition, so this source-visibility conflict is recorded rather than hidden.
 - **ExxonMobil:** MyPetroCareer and other indexed copies were treated as mirrors of the official ExxonMobil vacancy, not extra demand. JobStreet and Indeed independently corroborated the exact-title Kuala Lumpur role.
-- **Xsolla:** aggregators were reconciled to the active Xsolla Lever posting. Indeed also surfaced the FinOps engineer opening. A separate Xsolla FinOps posting scoped to CIS/Baku/Serbia is not a Malaysia vacancy and is not counted.
-- **Coforge:** direct LinkedIn job ID `4445718197` remained live with the exact title `FinOps Engineer`. Indeed currently surfaces a separate `FinOps Analyst (Hybrid Infrastructure)` role; the two are separate requisitions, so the Analyst role does not invalidate or replace the Engineer requisition.
+- **Xsolla:** aggregators were reconciled to the active Xsolla Lever posting. Indeed and LinkedIn also surfaced the FinOps engineer opening. A separate Xsolla FinOps posting scoped outside Malaysia is not counted.
+- **Coforge:** direct LinkedIn job ID `4445718197` remained live with the exact title `FinOps Engineer`, Kuala Lumpur location, recent posting age and Apply action. Indeed currently surfaces a separate `FinOps Analyst (Hybrid Infrastructure)` role; the two are separate requisitions, so the Analyst role does not invalidate or replace the Engineer requisition.
+- **Encora:** Indeed's composite exact-title role is independently corroborated by Maukerja. A separate Encora recruiter post also lists Kuala Lumpur FinOps Engineer hiring; this is corroboration, not an extra vacancy count.
+- **Softenger:** the active GetMalaysiaJobs listing is corroborated by a Softenger Malaysia recruiter post listing `FinOps Engineer` for AWS/OCI.
 - **Net2Source:** multiple recruiter postings with materially identical requirements were not multiplied; the verified listings were inactive.
-- **NTT DATA:** JobStreet showed duplicate employer-name renderings with materially identical role text. Those are treated as one underlying requisition.
+- **NTT DATA:** JobStreet showed duplicate employer-name renderings with materially identical role text. Those are treated as one underlying Req ID 387488 requisition.
 - **NTT DATA / Softenger:** the roles have overlapping insurance-sector AWS/OCI FinOps requirements, but separate employers and no confirmed shared requisition or explicit syndication relationship were found, so each remains a separate canonical vacancy.
 
 ## Dedicated JobStreet / Indeed / Google result
@@ -57,12 +59,17 @@ Every canonical vacancy requires a matching record under `market/evidence/` conf
 The dedicated major-source pass did **not** reveal a hidden population approaching 50 unique qualifying roles. It primarily:
 
 - corroborated ExxonMobil and NTT DATA on JobStreet;
-- corroborated ExxonMobil and Xsolla on Indeed;
-- exposed the separate Coforge `FinOps Analyst` and `FinOps Engineer` requisitions;
+- corroborated ExxonMobil, Xsolla and Encora on Indeed;
+- independently corroborated Encora through Maukerja;
+- exposed the separate Coforge `FinOps Analyst` and `FinOps Engineer` requisitions rather than conflating them;
 - confirmed that Google Careers is Google's own employer portal, not a universal job-board population source;
 - used Google-indexed public-web discovery only as supporting discovery, never as a reason to duplicate a requisition.
 
-See `market/SOURCE_CROSSCHECK_2026-09-30.md` for the per-vacancy matrix.
+See `market/SOURCE_CROSSCHECK_2026-09-30.md` and `market/source_crosscheck_matrix.csv` for the per-vacancy audit.
+
+## Source-confidence note
+
+Not all canonical vacancies have equal source visibility. ExxonMobil, NTT DATA and Xsolla have strong employer-owned or official recruiting evidence plus secondary corroboration. Coforge has a currently live direct LinkedIn requisition. Encora and Softenger have active platform/recruiter corroboration. International SOS has **conflicting source visibility**: LinkedIn-related search continues to surface the exact-title Kuala Lumpur role, while the public International SOS careers search did not surface the requisition during recheck. This conflict is recorded explicitly rather than hidden.
 
 ## Search saturation result
 
