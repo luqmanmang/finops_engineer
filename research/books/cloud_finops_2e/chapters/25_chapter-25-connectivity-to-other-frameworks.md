@@ -3,170 +3,250 @@
 > **Role:** Derived textbook source-of-truth note.  
 > **Book source locator:** `OEBPS/ch25.xhtml`  
 > **Source word count:** 2,966  
-> **Copyright boundary:** This note records structure and derived analysis; it does not reproduce the chapter body.
+> **Source boundary:** Source-derived explanation is paraphrased from the owned EPUB; 2026 Framework/project expansions are labelled separately.
 
 ## 1. Chapter Brief
 
-_TODO — explain the chapter's purpose, scope, and why it matters to a FinOps Engineer._
+This chapter explains that FinOps does not operate alone. Technology financial decisions intersect with Finance, IT financial management, IT asset/software asset management, IT service management, Enterprise Architecture, security/risk, procurement, sustainability, and other organizational practices. The practical goal is not to replace these disciplines but to connect terminology, data, ownership, and workflows.
 
 ## 2. Why This Chapter Matters
 
-_TODO — connect the chapter to operational/business decisions._
+Provider invoices are only one part of technology economics. A cheaper cloud design can become more expensive after licenses, operations, support, network, contracts, migration effort, or engineering overhead are included. Senior FinOps Engineers therefore need enough cross-discipline literacy to build a defensible total-cost and decision model.
 
 ## 3. Source Section Map
 
-- Chapter 25. Connectivity to Other Frameworks  `[OEBPS/ch25.xhtml]`
-        - Tip  `[OEBPS/ch25.xhtml]`
-- Total Cost of Ownership  `[OEBPS/ch25.xhtml]`
-- Working with Other Methodologies and Frameworks  `[OEBPS/ch25.xhtml]`
-        - Tip  `[OEBPS/ch25.xhtml]`
-- Find Out Who’s Out There  `[OEBPS/ch25.xhtml]`
-      - Stories from the Cloud—Ashley Hromatko  `[OEBPS/ch25.xhtml]`
-- Make Friends and Share Goals  `[OEBPS/ch25.xhtml]`
-        - Tip  `[OEBPS/ch25.xhtml]`
-- Share Influence, Terminology, and Processes  `[OEBPS/ch25.xhtml]`
-- Share Infrastructure  `[OEBPS/ch25.xhtml]`
-- Share Knowledge  `[OEBPS/ch25.xhtml]`
-        - Tip  `[OEBPS/ch25.xhtml]`
-- Conclusion  `[OEBPS/ch25.xhtml]`
+- Connectivity to Other Frameworks `[OEBPS/ch25.xhtml]`
+- Financial / IT Financial Management relationships `[OEBPS/ch25.xhtml]`
+- Asset / Software Asset Management relationships `[OEBPS/ch25.xhtml]`
+- Service Management relationships `[OEBPS/ch25.xhtml]`
+- Architecture / Governance relationships `[OEBPS/ch25.xhtml]`
+- Shared terminology, processes and data `[OEBPS/ch25.xhtml]`
 
 ## 4. Core Concepts
 
-_TODO — derived concept definitions, relationships, terminology, and mental models._
+- FinOps complements adjacent disciplines rather than replacing them.
+- TCO is broader than cloud-provider invoice cost.
+- Shared systems of record and common dimensions reduce reconciliation friction.
+- Ownership and decision rights should be explicit across Finance, Procurement, Engineering, Architecture, Security and asset/license functions.
+- Contract renewals, licenses, service lifecycle, architecture standards, budgets and chargeback frequently cross discipline boundaries.
+- Duplicate dashboards or competing definitions create governance risk.
 
 ## 5. Detailed Explanation
 
-_TODO — explain each major section in your own words, preserving the source's organization and intent._
+### SOURCE-DERIVED
+
+The chapter positions FinOps as a collaborative operating practice connected to established enterprise frameworks. Cost and usage data becomes more useful when combined with asset, service, contract, architecture and financial context.
+
+### PROJECT EXPLANATION
+
+The repo should model those intersections through explicit lineage rather than importing every adjacent framework in full. A useful pattern is:
+
+```text
+FinOps cost/usage
++ CMDB / service ownership
++ contracts / licenses
++ architecture metadata
++ budget / cost center
++ operational/SLA evidence
+→ decision-ready TCO and accountability
+```
+
+FinOps remains responsible for technology-value decisions while each source domain retains ownership of its authoritative data.
 
 ## 6. Examples
 
-_TODO — paraphrase source examples where useful, then add clearly labelled project examples._
+### License example
+
+Moving a database to a cheaper compute family can fail the TCO test if licensing terms increase total cost. Software Asset Management/Procurement context is required before recommending the change.
+
+### Service-management example
+
+A “zombie” VM may look unused in billing and telemetry but still support a regulated recovery process documented in service-management records. The owner and service lifecycle must be checked before deletion.
+
+### Contract example
+
+A vendor price increase can explain cost variance even when usage is flat. Usage-only RCA would incorrectly blame Engineering.
+
+### Architecture example
+
+A managed service may have a higher unit cloud rate but lower operational labor, patching, support, and incident burden. A strategic decision may require a wider TCO model than invoice comparison.
 
 ## 7. Justification / Why the Approach Works
 
-_TODO — why the book recommends or motivates the approach; separate source-derived rationale from project analysis._
+Enterprise technology cost is generated by technical, commercial, financial and operational choices. Connecting systems of record prevents FinOps from optimizing only the provider bill while moving cost or risk elsewhere. It also reduces duplicated ownership and contradictory dashboards.
 
 ## 8. Senior FinOps Approach
 
-_TODO — how a senior IC should frame the decision before acting._
+1. Identify the business decision and which disciplines own relevant inputs.
+2. Define shared terminology and identifiers: business service, application, owner, cost center, contract, asset/license, environment.
+3. Identify authoritative systems of record for each dimension.
+4. Define exchange grain, freshness, reconciliation and ownership.
+5. Build a lineage-aware joined model rather than copying uncontrolled spreadsheets.
+6. Use invoice-only analysis for operational questions and wider TCO only where the decision requires it.
+7. Align change, renewal, architecture, budget and chargeback workflows.
+8. Document exceptions/conflicts and who resolves them.
+9. Review the integration model as organization/tooling changes.
 
 ## 9. Step-by-Step Execution
 
 ```text
-CONTEXT
-→ BUSINESS QUESTION
-→ DATA REQUIRED
-→ HYPOTHESIS
-→ ANALYSIS
-→ OPTIONS
+DECISION
+→ INTERSECTING DISCIPLINES
+→ SYSTEMS OF RECORD
+→ COMMON KEYS / TERMINOLOGY
+→ DATA QUALITY + LINEAGE
+→ COST / TCO MODEL
+→ CROSS-FUNCTIONAL REVIEW
 → DECISION
-→ IMPLEMENTATION
-→ TECHNICAL VALIDATION
-→ FINANCIAL VALIDATION
-→ BUSINESS / SLA VALIDATION
-→ GUARDRAIL
+→ IMPLEMENT
+→ FINANCIAL + TECHNICAL + OPERATIONAL VALIDATION
 ```
-
-_TODO — specialize this sequence for the chapter._
 
 ## 10. Decision Rules
 
-_TODO — when to use approach A/B, thresholds, escalation criteria, and decision ownership._
+- Use provider-bill cost for narrow operational optimization when external cost components do not change the answer.
+- Use TCO for architecture, sourcing, licensing, migration, build-vs-buy, or vendor decisions where non-cloud costs are material.
+- Do not recreate an authoritative CMDB, contract, or license system inside FinOps when it can be referenced reliably.
+- When two systems disagree, preserve the conflict and source ownership rather than silently choosing a value.
+- Define one canonical business/service ownership model for reporting and action routing.
 
 ## 11. Trade-offs
 
-_TODO — cost, performance, reliability, SLA, speed, lock-in, and organizational trade-offs._
+| Choice | Benefit | Risk |
+|---|---|---|
+| Invoice-only analysis | fast, objective billing scope | misses labor/licenses/contracts |
+| Fully loaded TCO | wider strategic view | more assumptions and maintenance |
+| Central data model | consistent reporting | integration complexity |
+| Local team spreadsheets | fast/local flexibility | drift and reconciliation problems |
+| Tight framework integration | shared governance | can become bureaucratic if overdesigned |
 
 ## 12. Failure Modes / Edge Cases
 
-_TODO — common mistakes, ambiguous cases, and conditions where the chapter's default approach may fail._
+- Duplicate service/owner masters across FinOps and CMDB.
+- Mismatched cost-center and application identifiers.
+- Ignoring license/support/network/ops effects in architecture comparison.
+- No contract renewal owner.
+- Treating provider invoice as complete TCO for every decision.
+- Using fully loaded TCO for simple operational actions where assumptions add noise.
+- Conflicting dashboards with different “savings” definitions.
+- FinOps attempting to own adjacent disciplines instead of integrating with them.
 
 ## 13. Data Required
 
-_TODO — cost, usage, pricing, ownership, utilization, business-driver, contract, and operational data._
+- cloud/platform cost and usage
+- CMDB/service/application ownership
+- cost center / finance hierarchy
+- contracts, negotiated rates and renewals
+- software/license entitlement and cost
+- network/support/operations cost where relevant
+- architecture/dependency metadata
+- change/incident/service lifecycle
+- security/compliance constraints
 
 ## 14. SQL / Python / IaC Application
 
-_TODO — analyses and automation that belong in SQL, Python, Terraform/CI/CD, or are not applicable._
+- **SQL:** canonical dimension joins, TCO components, reconciliation and allocation.
+- **Python:** system integration, entity resolution, data-quality/conflict detection and lineage checks.
+- **IaC / CI/CD:** architecture/policy controls can expose service/owner/cost metadata at deployment time.
+- **Governance:** source ownership and data contracts matter more than copying all data into one tool.
 
 ## 15. Provider Implementation
 
-### AWS
-_TODO_
-
-### Azure
-_TODO_
-
-### Microsoft Fabric
-_TODO where relevant_
-
-### Snowflake
-_TODO where relevant_
-
-### Databricks
-_TODO where relevant_
+AWS/Azure/Fabric/Snowflake/Databricks cost data should be integrated with enterprise systems using stable identifiers and documented grain. Provider tags/labels help, but they do not replace service, contract, financial, or asset systems of record. Platform-specific implementation should use current official APIs/export formats.
 
 ## 16. Stakeholder Perspective
 
-- Engineering — _TODO_
-- Finance — _TODO_
-- Procurement — _TODO_
-- Leadership / Business — _TODO_
-- FinOps — _TODO_
+- **Finance / ITFM:** budget, cost centers, planning and accounting definitions.
+- **Procurement / Vendor Management:** contracts, renewals and negotiated terms.
+- **ITAM / SAM:** asset/license entitlement and lifecycle.
+- **ITSM:** service ownership, change and lifecycle context.
+- **Enterprise Architecture / Security:** standards and risk constraints.
+- **Engineering:** workload implementation and technical evidence.
+- **FinOps:** connects these inputs into technology-value decisions.
 
 ## 17. Validation
 
-- Technical validation — _TODO_
-- Financial validation — _TODO_
-- Business / SLA validation — _TODO_
+- Financial: all intended TCO components reconcile to their source systems.
+- Technical: architecture/service assumptions match actual implementation.
+- Operational: ownership and service lifecycle are correct.
+- Governance: conflicting data has an owner and resolution path.
 
 ## 18. KPIs
 
-_TODO — metrics that prove progress/outcome, including denominator and grain._
+- ownership mapping coverage %
+- contract/license mapping coverage %
+- reconciliation variance between systems
+- TCO component completeness
+- unresolved data-conflict count/age
+- renewal actions completed on time
+- chargeback/showback reconciliation %
 
 ## 19. Guardrails
 
-- Preventive — _TODO_
-- Detective — _TODO_
-- Corrective — _TODO_
+- **Preventive:** common identifier/data-contract standards and authoritative-source ownership.
+- **Detective:** reconciliation, orphan and conflict checks.
+- **Corrective:** owner-led master-data remediation, exception or model update.
 
 ## 20. Real-World Implications
 
-_TODO — connect to Grade A/B cases without inventing undisclosed company behavior._
+A cost-reduction case should not be generalized into a full TCO claim unless the source includes the relevant labor/license/contract components. Keep published evidence and our broader decision model separate.
 
 ## 21. FinOps Framework 2026 Reconciliation
 
-_TODO — mark concepts as CURRENT / EVOLVED / SUPERSEDED / NEEDS RECONCILIATION._
+**CURRENT AND FORMALIZED.** The 2026 Framework explicitly includes **Intersecting Disciplines**, reflecting the same core idea: FinOps collaborates with related technology, finance, sourcing, governance, sustainability and operational practices. The current Framework is broader than the 2023 textbook and should be treated as canonical taxonomy.
 
 ## 22. Malaysia N=7 Market Relevance
 
-_TODO — map only to verified vacancy signals; retain N=7 limitation._
+The N=7 snapshot strongly signals Finance, Engineering, governance, vendor/procurement and reporting collaboration. This chapter helps close the learner's gap between strong technical Data Engineering evidence and enterprise financial/commercial operating context. N=7 remains a small prioritization snapshot.
 
 ## 23. Lab Mapping
 
-_TODO — lab(s), synthetic fault(s), expected evidence, teardown/cost controls._
+Build a mini enterprise TCO model combining:
+
+- cloud billing
+- application/service master
+- cost center
+- software license
+- vendor contract/renewal
+- synthetic operations/support cost
+
+Inject duplicate application IDs, mismatched owners and a flat-usage vendor price increase. Produce lineage, reconciliation, TCO versus invoice-only comparison, and an owner remediation queue.
 
 ## 24. Power BI Mapping
 
-_TODO — Diagnose → Hypothesis → Finding → Solution → Validation → Insight views/measures._
+Views:
+
+- provider invoice vs fully loaded TCO
+- cost by service/cost center/vendor
+- contract/license renewal exposure
+- ownership/data-quality coverage
+- reconciliation conflicts
+- build/buy or architecture-option comparison
 
 ## 25. Interview Mapping
 
 ### 30-second answer
-_TODO_
+
+FinOps does not replace Finance, ITSM, SAM, Procurement or Architecture. I identify which system is authoritative for each dimension, connect cost and usage to service, owner, contract and financial context, and widen the model to TCO only when the decision needs it. That prevents optimizing the cloud bill while moving cost or risk somewhere else.
 
 ### 2-minute answer
-_TODO_
+
+For an operational rightsizing question, provider billing plus utilization may be enough. For a strategic migration or build-vs-buy decision, I would include licenses, contracts, network, support and engineering/operations costs where material. I keep source-system ownership explicit, reconcile common identifiers, preserve conflicts instead of hiding them, and use a shared service/owner hierarchy so Finance, Engineering and Procurement act from the same facts.
 
 ### Senior follow-up
-_TODO — WHAT / WHY / WHEN / HOW / TRADEOFF / VALIDATION / BUSINESS IMPACT._
+
+Be ready to explain when TCO adds useful decision context versus unnecessary assumptions, and how you resolve a conflict between CMDB ownership and billing tags.
 
 ## 26. Key Takeaways
 
-_TODO — concise derived takeaways._
+- FinOps is an intersecting discipline, not an island.
+- Provider invoice is not always total cost.
+- Use the narrowest cost model that answers the decision correctly.
+- Preserve authoritative source ownership and lineage.
+- Shared identifiers and definitions are critical enterprise controls.
 
 ## 27. Source Locator
 
-- EPUB file: `OEBPS/ch25.xhtml`
-- Section headings and anchors are preserved above for traceability.
-- Body text is intentionally not copied into this repository artifact.
+- EPUB: `OEBPS/ch25.xhtml`
+- Source-derived content is paraphrased.
+- 2026 Framework/project expansion is separate from textbook attribution.

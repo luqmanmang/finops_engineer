@@ -3,179 +3,257 @@
 > **Role:** Derived textbook source-of-truth note.  
 > **Book source locator:** `OEBPS/ch23.xhtml`  
 > **Source word count:** 4,349  
-> **Copyright boundary:** This note records structure and derived analysis; it does not reproduce the chapter body.
+> **Source boundary:** Source-derived explanation is paraphrased from the owned EPUB; 2026 Framework/provider/project expansions are labelled separately.
 
 ## 1. Chapter Brief
 
-_TODO — explain the chapter's purpose, scope, and why it matters to a FinOps Engineer._
+This chapter applies FinOps to containerized and orchestrated workloads. The key complication is that the cloud invoice often stops at the node, cluster, or managed-service boundary while accountability belongs to namespaces, workloads, products, teams, or customers. FinOps therefore needs cloud billing plus Kubernetes telemetry to allocate shared cost and optimize both workload demand and cluster supply.
 
 ## 2. Why This Chapter Matters
 
-_TODO — connect the chapter to operational/business decisions._
+Containers create a two-layer optimization problem. A pod can be over-requested even when a node looks busy, and a cluster can be oversized even after individual workloads are efficient. If allocation and optimization are performed only from the provider bill, important ownership and scheduler behavior remain invisible.
 
 ## 3. Source Section Map
 
-- Chapter 23. FinOps for the Container World  `[OEBPS/ch23.xhtml]`
-- Containers 101  `[OEBPS/ch23.xhtml]`
-        - Figure 23-1. Basic view of a Kubernetes cluster  `[OEBPS/ch23.xhtml]`
-- The Move to Container Orchestration  `[OEBPS/ch23.xhtml]`
-- The Container FinOps Lifecycle  `[OEBPS/ch23.xhtml]`
-- Container Inform Phase  `[OEBPS/ch23.xhtml]`
-- Cost Allocation  `[OEBPS/ch23.xhtml]`
-- Container Proportions  `[OEBPS/ch23.xhtml]`
-  - Custom container proportions  `[OEBPS/ch23.xhtml]`
-        - Figure 23-2. Unallocated capacity on a server instance/node  `[OEBPS/ch23.xhtml]`
-        - Tip  `[OEBPS/ch23.xhtml]`
-  - Container proportions in Google Cloud  `[OEBPS/ch23.xhtml]`
-- Tags, Labels, and Namespaces  `[OEBPS/ch23.xhtml]`
-- Container Optimize Phase  `[OEBPS/ch23.xhtml]`
-- Cluster Placement  `[OEBPS/ch23.xhtml]`
-- Container Usage Optimization  `[OEBPS/ch23.xhtml]`
-        - Tip  `[OEBPS/ch23.xhtml]`
-  - Centralize the rightsizing of clusters  `[OEBPS/ch23.xhtml]`
-  - Decentralize the rightsizing of containers/pods  `[OEBPS/ch23.xhtml]`
-- Server Instance Rate Optimization  `[OEBPS/ch23.xhtml]`
-- Container Operate Phase  `[OEBPS/ch23.xhtml]`
-- Serverless Containers  `[OEBPS/ch23.xhtml]`
-- Conclusion  `[OEBPS/ch23.xhtml]`
+- Containers 101 `[OEBPS/ch23.xhtml]`
+- Move to Container Orchestration `[OEBPS/ch23.xhtml]`
+- Container FinOps Lifecycle `[OEBPS/ch23.xhtml]`
+- Inform / Cost Allocation `[OEBPS/ch23.xhtml]`
+- Container Proportions / Custom Proportions `[OEBPS/ch23.xhtml]`
+- Tags, Labels, and Namespaces `[OEBPS/ch23.xhtml]`
+- Optimize / Cluster Placement `[OEBPS/ch23.xhtml]`
+- Usage Optimization `[OEBPS/ch23.xhtml]`
+- Cluster Rightsizing / Pod Rightsizing `[OEBPS/ch23.xhtml]`
+- Server Instance Rate Optimization `[OEBPS/ch23.xhtml]`
+- Operate `[OEBPS/ch23.xhtml]`
+- Serverless Containers `[OEBPS/ch23.xhtml]`
 
 ## 4. Core Concepts
 
-_TODO — derived concept definitions, relationships, terminology, and mental models._
+- Cloud billing and Kubernetes telemetry must be reconciled at a shared time and ownership grain.
+- Allocation can use CPU requests, memory requests, actual usage, weighted/custom proportions, or combinations; the basis must be documented.
+- Shared and system overhead should remain explicit rather than disappearing into an arbitrary split.
+- Rightsizing occurs at two levels: **pod/container demand** and **node/cluster supply**.
+- Workload teams are best placed to tune application requests/limits; platform teams are best placed to manage cluster/node supply and autoscaling.
+- Bin packing, scheduling constraints, disruption budgets, topology, and autoscaling affect cost as much as average utilization.
+- Spot/interruptible capacity is a rate lever only for workloads designed to tolerate interruption.
 
 ## 5. Detailed Explanation
 
-_TODO — explain each major section in your own words, preserving the source's organization and intent._
+### SOURCE-DERIVED
+
+The chapter extends the familiar Inform → Optimize → Operate pattern into containers. First make shared container cost visible and attributable, then optimize workload and cluster usage, then create the operating practices that keep requests, placement, labels, and rate decisions healthy.
+
+### PROJECT EXPLANATION
+
+A production model should preserve at least four layers:
+
+```text
+Cloud bill / node cost
+→ cluster + node inventory
+→ namespace / workload / pod telemetry
+→ business owner / product / unit economics
+```
+
+Allocation must reconcile back to the billed total. Optimization should start with workload request hygiene because inflated requests can force the scheduler to retain nodes that real usage does not need. Only after demand is credible should cluster rightsizing, autoscaling, instance-family, or Spot strategies be evaluated.
 
 ## 6. Examples
 
-_TODO — paraphrase source examples where useful, then add clearly labelled project examples._
+### Allocation example
+
+A cluster costs RM100,000/month. Three product namespaces consume different CPU and memory shares. Equal splitting would allocate RM33,333 each, but a weighted CPU/memory basis may show one product drives 60% of allocatable demand. The chosen basis must reconcile to RM100,000 including system/shared overhead.
+
+### Pod-rightsizing example
+
+A deployment requests 4 vCPU per pod but normally uses 0.5–1 vCPU. The scheduler plans around requests, not only actual use, so inflated requests can create stranded node capacity. Correcting requests can allow cluster autoscaling to remove nodes safely.
+
+### Spot example
+
+Stateless batch workers with checkpoint/retry behavior may use Spot; a single-replica stateful workload with strict availability should not be moved merely because the rate is lower.
 
 ## 7. Justification / Why the Approach Works
 
-_TODO — why the book recommends or motivates the approach; separate source-derived rationale from project analysis._
+Container economics are hidden when cost and telemetry are separated. Joining the two creates explainable ownership and exposes the causal chain from workload configuration to scheduler placement to node capacity to billed spend. Sequencing workload optimization before rate optimization also prevents the organization from committing to an inefficient baseline.
 
 ## 8. Senior FinOps Approach
 
-_TODO — how a senior IC should frame the decision before acting._
+1. Ingest provider billing plus cluster/node/pod telemetry.
+2. Reconcile cluster/node cost to billed totals.
+3. Define ownership grain: namespace, workload, team, product, service.
+4. Choose and document an allocation basis; retain shared/system overhead explicitly.
+5. Validate labels and owner coverage.
+6. Compare requests/limits to actual CPU and memory behavior, including peaks.
+7. Identify over-requested workloads and scheduling constraints.
+8. Re-evaluate node utilization, bin packing, autoscaler behavior, and cluster size after workload tuning.
+9. Evaluate instance-family, commitment, and Spot options only against the stabilized baseline.
+10. Validate cost, performance, reliability, and business-unit economics after change.
 
 ## 9. Step-by-Step Execution
 
 ```text
-CONTEXT
-→ BUSINESS QUESTION
-→ DATA REQUIRED
-→ HYPOTHESIS
-→ ANALYSIS
+BILLED CLUSTER COST
+→ K8S TELEMETRY
+→ OWNERSHIP / LABEL QUALITY
+→ ALLOCATION MODEL
+→ RECONCILIATION
+→ POD REQUEST-vs-USAGE ANALYSIS
+→ CLUSTER / NODE ANALYSIS
 → OPTIONS
-→ DECISION
-→ IMPLEMENTATION
-→ TECHNICAL VALIDATION
-→ FINANCIAL VALIDATION
-→ BUSINESS / SLA VALIDATION
+→ ENGINEERING REVIEW
+→ IMPLEMENT
+→ SLO + COST VALIDATION
 → GUARDRAIL
 ```
 
-_TODO — specialize this sequence for the chapter._
-
 ## 10. Decision Rules
 
-_TODO — when to use approach A/B, thresholds, escalation criteria, and decision ownership._
+- Do not optimize nodes before correcting clearly inflated workload requests.
+- Do not use request-based allocation blindly when request hygiene is poor; compare with actual usage.
+- Keep system/shared cost visible when no causal driver exists.
+- Use CPU-only allocation only when CPU is a reasonable cost driver; include memory or custom weights when needed.
+- Use Spot only when interruption behavior is deliberately engineered and tested.
+- Use averages for orientation, not capacity decisions; inspect peaks and percentile behavior.
 
 ## 11. Trade-offs
 
-_TODO — cost, performance, reliability, SLA, speed, lock-in, and organizational trade-offs._
+| Choice | Benefit | Risk |
+|---|---|---|
+| Request-based allocation | aligns to scheduler reservation | distorted by inflated requests |
+| Actual-use allocation | reflects consumption | can penalize efficient burst patterns or ignore reserved capacity |
+| Central cluster optimization | consistent platform control | weaker application context |
+| Team-owned pod tuning | strong workload context | inconsistent standards without guardrails |
+| Spot nodes | lower rate | interruption / recovery complexity |
+| High bin packing | lower idle capacity | less headroom / larger blast radius if poorly designed |
 
 ## 12. Failure Modes / Edge Cases
 
-_TODO — common mistakes, ambiguous cases, and conditions where the chapter's default approach may fail._
+- Double-counting node cost and pod cost.
+- Dropping kube-system/shared overhead from reconciliation.
+- Equal splitting when workload demand differs materially.
+- Rightsizing nodes while pod requests remain inflated.
+- Looking only at CPU when memory is the binding dimension.
+- No label/namespace governance.
+- Using monthly averages that hide peak demand.
+- Assuming serverless containers eliminate FinOps accountability.
 
 ## 13. Data Required
 
-_TODO — cost, usage, pricing, ownership, utilization, business-driver, contract, and operational data._
+- provider billing by cluster/node/service
+- cluster/node/pod inventory
+- CPU/memory requests and limits
+- CPU/memory actual usage and percentiles
+- namespace, labels, workload/controller identifiers
+- autoscaler and scheduler events
+- Spot interruption events
+- owner/product/business-service mapping
+- SLO/SLA and throughput units
 
 ## 14. SQL / Python / IaC Application
 
-_TODO — analyses and automation that belong in SQL, Python, Terraform/CI/CD, or are not applicable._
+- **SQL:** reconcile bill to cluster/workload allocation, compute request-to-usage ratios, idle/shared cost, cost per namespace/product.
+- **Python:** ingest K8s APIs/telemetry, build allocation logic, anomaly detection, candidate ranking, scenario models.
+- **IaC / CI/CD:** enforce label standards, requests/limits policy, autoscaler configuration, approved node-pool types, disruption rules.
+- **Production rule:** automation must be bounded, idempotent, logged, and reversible or exception-aware.
 
 ## 15. Provider Implementation
 
-### AWS
-_TODO_
-
-### Azure
-_TODO_
-
-### Microsoft Fabric
-_TODO where relevant_
-
-### Snowflake
-_TODO where relevant_
-
-### Databricks
-_TODO where relevant_
+AWS EKS and Azure AKS require combining provider billing with Kubernetes telemetry. Similar patterns apply to other managed Kubernetes platforms. Data-platform shared-compute systems such as Databricks, Snowflake, and Fabric are not Kubernetes substitutes, but the same allocation principle—shared capacity must be mapped to accountable workloads—still applies. Re-check provider-specific mechanics in current official docs.
 
 ## 16. Stakeholder Perspective
 
-- Engineering — _TODO_
-- Finance — _TODO_
-- Procurement — _TODO_
-- Leadership / Business — _TODO_
-- FinOps — _TODO_
+- **Engineering / workload teams:** requests, limits, performance and resilience.
+- **Platform Engineering:** node pools, autoscaling, scheduling and shared infrastructure.
+- **Finance:** allocation/reconciliation and planning.
+- **Product / business:** value and unit-economic denominator.
+- **FinOps:** common data model, cost allocation, prioritization, workflow and validation.
 
 ## 17. Validation
 
-- Technical validation — _TODO_
-- Financial validation — _TODO_
-- Business / SLA validation — _TODO_
+- **Technical:** pods schedule correctly; latency/error/SLO and autoscaler behavior remain acceptable.
+- **Financial:** allocated workloads plus shared overhead reconcile to billed cluster cost.
+- **Business:** cost per workload/business unit improves without sacrificing required value.
+- **Evidence:** before/after request, node, cost and SLO metrics are retained.
 
 ## 18. KPIs
 
-_TODO — metrics that prove progress/outcome, including denominator and grain._
+- allocated-cost coverage %
+- unallocated/shared cost %
+- cost per namespace/workload/product
+- CPU and memory request-to-usage ratio
+- node utilization and idle cost
+- bin-packing efficiency
+- Spot share and interruption success rate
+- cost per business transaction/unit
 
 ## 19. Guardrails
 
-- Preventive — _TODO_
-- Detective — _TODO_
-- Corrective — _TODO_
+- **Preventive:** mandatory ownership labels, request/limit policy, allowed node-pool/Spot rules.
+- **Detective:** unallocated-cost, over-requesting, idle-node, autoscaler and SLO alerts.
+- **Corrective:** workload owner remediation, cluster resizing, policy exception or rollback.
 
 ## 20. Real-World Implications
 
-_TODO — connect to Grade A/B cases without inventing undisclosed company behavior._
+Container recommendations must distinguish provider/customer case facts from our analysis. If a case does not disclose its scheduler, node-pool, allocation method, or architecture, record `Not disclosed by source` rather than inventing details.
 
 ## 21. FinOps Framework 2026 Reconciliation
 
-_TODO — mark concepts as CURRENT / EVOLVED / SUPERSEDED / NEEDS RECONCILIATION._
+**CURRENT CONCEPTS, UPDATED TAXONOMY.** Container FinOps maps mainly to Allocation, Usage Optimization, Architecting & Workload Placement, Rate Optimization, Reporting & Analytics, and Unit Economics. In the 2026 Framework, Kubernetes is a workload/technology pattern inside broader capabilities rather than a separate lifecycle.
 
 ## 22. Malaysia N=7 Market Relevance
 
-_TODO — map only to verified vacancy signals; retain N=7 limitation._
+Kubernetes/container FinOps is not the dominant observed N=7 signal, so it remains a secondary market-weighted topic. It is still an important senior technical competency because shared-cost allocation, workload requests, and cluster supply expose whether the FinOps Engineer understands real infrastructure behavior. N=7 is prioritization evidence only.
 
 ## 23. Lab Mapping
 
-_TODO — lab(s), synthetic fault(s), expected evidence, teardown/cost controls._
+Build synthetic Kubernetes telemetry plus node billing. Required faults:
+
+- inflated pod CPU requests
+- memory-heavy workload
+- orphaned/shared namespace cost
+- stranded node capacity
+- poor bin packing
+- one interruptible workload and one non-interruptible workload
+
+Produce allocation by two methods, reconcile totals, rank rightsizing candidates, model cluster change and Spot scenario, then validate cost and synthetic SLO evidence.
 
 ## 24. Power BI Mapping
 
-_TODO — Diagnose → Hypothesis → Finding → Solution → Validation → Insight views/measures._
+Pages/measures:
+
+- cluster → namespace → workload drill-through
+- allocated vs shared/unallocated cost
+- request vs actual CPU/memory
+- node idle/stranded cost
+- cost per workload/business unit
+- optimization candidates and owner
+- before/after cost + SLO validation
+
+No vanity visuals: every view must support diagnosis, action, or validation.
 
 ## 25. Interview Mapping
 
 ### 30-second answer
-_TODO_
+
+For Kubernetes I combine cloud billing with cluster telemetry. I allocate shared node cost to namespaces or workloads using a documented basis, reconcile it to the invoice, then compare requests and limits with actual CPU/memory behavior. I tune workload demand before shrinking cluster supply, evaluate Spot only for interruption-tolerant workloads, and validate cost changes against SLO and scheduler behavior.
 
 ### 2-minute answer
-_TODO_
+
+I treat containers as a two-layer cost problem. First I create trustworthy allocation by joining billing, node inventory, namespace/workload metadata and telemetry. I keep shared system cost explicit. Then I look for inflated requests and limits because scheduler reservation can force unnecessary nodes even when actual use is low. Once workload demand is credible, I analyze node utilization, bin packing and autoscaler behavior, then rate options such as commitments or Spot. Engineering owns workload safety; the platform team owns cluster supply; FinOps provides the evidence and validates allocated cost and SLO after change.
 
 ### Senior follow-up
-_TODO — WHAT / WHY / WHEN / HOW / TRADEOFF / VALIDATION / BUSINESS IMPACT._
+
+Be ready to explain why request-based and actual-use allocation can disagree, why average node utilization is insufficient, and why a commitment purchase before pod rightsizing can lock in waste.
 
 ## 26. Key Takeaways
 
-_TODO — concise derived takeaways._
+- Container FinOps needs billing plus orchestration telemetry.
+- Allocation basis must be documented and reconcile to the bill.
+- Optimize pod demand before cluster supply and rate.
+- Shared/system overhead should remain visible.
+- Cost improvements require SLO validation.
 
 ## 27. Source Locator
 
-- EPUB file: `OEBPS/ch23.xhtml`
-- Section headings and anchors are preserved above for traceability.
-- Body text is intentionally not copied into this repository artifact.
+- EPUB: `OEBPS/ch23.xhtml`
+- Source-derived content is paraphrased.
+- 2026 Framework/provider/project expansion is separate from textbook attribution.
