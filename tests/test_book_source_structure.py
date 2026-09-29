@@ -17,6 +17,9 @@ class BookSourceStructureTests(unittest.TestCase):
         raw = base64.b64decode(SOURCE.read_text(encoding="ascii"))
         return json.loads(gzip.decompress(raw).decode("utf-8"))
 
+    def chapter_files(self) -> list[Path]:
+        return sorted((BOOK_DIR / "chapters").glob("*.md"))
+
     def test_owned_book_structure_has_27_chapters(self) -> None:
         manifest = self.load_manifest()
         self.assertEqual(27, manifest["chapter_count"])
@@ -33,30 +36,72 @@ class BookSourceStructureTests(unittest.TestCase):
             "Commitment-Based Discount",
             "Automating Cost Management",
             "Metric-Driven Cost Optimization",
+            "FinOps for the Container World",
+            "Partnering with Engineers",
+            "Data-Driven Decision Making",
+            "Secret Ingredient",
         ]
         joined = "\n".join(titles)
         for phrase in required:
             self.assertIn(phrase, joined)
 
-    def test_generated_markdown_contract(self) -> None:
-        chapter_files = sorted((BOOK_DIR / "chapters").glob("*.md"))
+    def test_all_27_chapter_notes_are_completed(self) -> None:
+        chapter_files = self.chapter_files()
         self.assertEqual(27, len(chapter_files))
+
         required_sections = [
             "## 1. Chapter Brief",
+            "## 2. Why This Chapter Matters",
+            "## 3. Source Section Map",
+            "## 4. Core Concepts",
+            "## 5. Detailed Explanation",
             "## 6. Examples",
             "## 7. Justification / Why the Approach Works",
             "## 8. Senior FinOps Approach",
             "## 9. Step-by-Step Execution",
+            "## 10. Decision Rules",
             "## 11. Trade-offs",
             "## 12. Failure Modes / Edge Cases",
+            "## 13. Data Required",
+            "## 14. SQL / Python / IaC Application",
+            "## 15. Provider Implementation",
+            "## 16. Stakeholder Perspective",
+            "## 17. Validation",
+            "## 18. KPIs",
+            "## 19. Guardrails",
+            "## 20. Real-World Implications",
             "## 21. FinOps Framework 2026 Reconciliation",
             "## 22. Malaysia N=7 Market Relevance",
+            "## 23. Lab Mapping",
+            "## 24. Power BI Mapping",
             "## 25. Interview Mapping",
+            "## 26. Key Takeaways",
+            "## 27. Source Locator",
         ]
+
+        forbidden_markers = [
+            "_TODO",
+            "TODO —",
+            "TODO_",
+        ]
+
         for path in chapter_files:
             text = path.read_text(encoding="utf-8")
+            self.assertGreater(
+                len(text),
+                5000,
+                f"{path.name} is too small to satisfy the detailed chapter-note contract",
+            )
             for section in required_sections:
                 self.assertIn(section, text, f"{path.name} missing {section}")
+            for marker in forbidden_markers:
+                self.assertNotIn(marker, text, f"{path.name} still contains placeholder {marker}")
+            self.assertIn("OEBPS/ch", text, f"{path.name} missing EPUB source locator")
+            self.assertIn(
+                "Source",
+                text,
+                f"{path.name} missing an explicit source/source-boundary marker",
+            )
 
     def test_chapter_index_matches_generated_files(self) -> None:
         with (BOOK_DIR / "chapter_index.csv").open(encoding="utf-8", newline="") as handle:
