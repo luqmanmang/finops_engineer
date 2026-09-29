@@ -41,7 +41,7 @@ BASE_FIELDS = [
 TEXT_FIELDS = ["role_summary", "responsibility_text", "requirement_text", "preferred_text"]
 
 DERIVED_OUTPUTS = {
-    "cloud_frequency.csv": ("cloud", ["aws", "azure", "gcp", "multi_cloud"]),
+    "cloud_frequency.csv": ("cloud", ["aws", "azure", "gcp", "oci", "multi_cloud"]),
     "finops_capability_frequency.csv": ("capability", None),
     "skill_frequency.csv": ("skill", None),
     "platform_frequency.csv": ("platform", ["kubernetes", "databricks", "snowflake", "fabric"]),
@@ -176,10 +176,10 @@ def classify(record: dict[str, Any], signal_fields: list[str], keywords: dict[st
             continue
         signals[field] = any(keyword_match(text, term) for term in keywords.get(field, []))
 
-    signals["multi_cloud"] = sum(bool(signals.get(cloud)) for cloud in ["aws", "azure", "gcp"]) >= 2
+    signals["multi_cloud"] = sum(bool(signals.get(cloud)) for cloud in ["aws", "azure", "gcp", "oci"]) >= 2
     for field, value in record.get("manual_overrides", {}).items():
         signals[field] = value
-    if not any(signals.get(cloud) for cloud in ["aws", "azure", "gcp"]):
+    if not any(signals.get(cloud) for cloud in ["aws", "azure", "gcp", "oci"]):
         signals["multi_cloud"] = bool(record.get("manual_overrides", {}).get("multi_cloud", False))
     return signals
 
@@ -256,7 +256,7 @@ def markdown_table(rows: list[dict[str, Any]], label: str, limit: int = 15) -> s
 
 
 def render_market_analysis(records: list[dict[str, Any]], groups: dict[str, list[str]], rejected: list[dict[str, Any]]) -> str:
-    cloud = frequency_rows(records, ["aws", "azure", "gcp", "multi_cloud"], "cloud")
+    cloud = frequency_rows(records, ["aws", "azure", "gcp", "oci", "multi_cloud"], "cloud")
     finops = frequency_rows(records, groups["finops_capability"], "capability")
     engineering = frequency_rows(records, groups["engineering"], "skill")
     industry = categorical_frequency(records, "industry", "industry")

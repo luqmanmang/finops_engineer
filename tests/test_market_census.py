@@ -41,6 +41,24 @@ class MarketCensusUnitTests(unittest.TestCase):
         self.assertTrue(signals["multi_cloud"])
         self.assertFalse(signals["python"])
 
+    def test_oci_is_classified_and_counts_as_multi_cloud(self):
+        taxonomy = {
+            "cloud": {"aws": ["aws"], "azure": ["azure"], "gcp": ["gcp"], "oci": ["oci", "oracle cloud"]},
+        }
+        fields, keywords, _ = market_census.flatten_taxonomy(taxonomy)
+        record = {
+            "role_summary": "Operate AWS and OCI cloud cost management.",
+            "responsibility_text": "",
+            "requirement_text": "",
+            "preferred_text": "",
+            "manual_overrides": {},
+        }
+        signals = market_census.classify(record, fields, keywords)
+        self.assertTrue(signals["aws"])
+        self.assertTrue(signals["oci"])
+        self.assertTrue(signals["multi_cloud"])
+        self.assertIn("oci", market_census.DERIVED_OUTPUTS["cloud_frequency.csv"][1])
+
     def test_eligibility_requires_evidence(self):
         raw = {
             "active_status": True,

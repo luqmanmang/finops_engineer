@@ -1,1 +1,13 @@
 tool,count,percentage
+power_bi,3,75.0
+api,2,50.0
+automation,2,50.0
+cicd,2,50.0
+tableau,2,50.0
+terraform,2,50.0
+excel,1,25.0
+kubernetes,1,25.0
+bicep,0,0.0
+databricks,0,0.0
+fabric,0,0.0
+snowflake,0,0.0

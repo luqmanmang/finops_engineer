@@ -1,1 +1,5 @@
-industry,vacancy_count,vacancy_pct
+industry,count,percentage
+Energy and chemicals,1,25.0
+IT services and consulting,1,25.0
+Recruitment / medical and travel security client,1,25.0
+Video game commerce technology,1,25.0

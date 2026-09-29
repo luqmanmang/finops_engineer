@@ -1,1 +1,5 @@
-seniority,vacancy_count,vacancy_pct
+seniority,count,percentage
+Entry level,1,25.0
+Semi-senior,1,25.0
+Senior,1,25.0
+Upcoming/recent graduate,1,25.0

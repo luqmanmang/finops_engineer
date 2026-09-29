@@ -1,11 +1,19 @@
 {
-  "generated_at": "2026-09-30T02:03:00+08:00",
+  "generated_at": "2026-09-29T19:10:20+00:00",
   "target_population_requested": 50,
-  "raw_record_count": 0,
-  "evidence_record_count": 0,
-  "verified_active_exact_title_population": 0,
-  "coverage": "0 / 50",
-  "rejected_count": 0,
-  "rejected": [],
+  "raw_record_count": 5,
+  "evidence_record_count": 5,
+  "verified_active_exact_title_population": 4,
+  "coverage": "4 / 50",
+  "rejected_count": 1,
+  "rejected": [
+    {
+      "vacancy_id": "MY-FE-0005",
+      "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-net2source-n2s-4467966140",
+      "reasons": [
+        "inactive"
+      ]
+    }
+  ],
   "status": "PASS"
 }

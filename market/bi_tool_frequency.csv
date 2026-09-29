@@ -1,1 +1,4 @@
-bi_tool,vacancy_count,vacancy_pct
+bi_tool,count,percentage
+power_bi,3,75.0
+tableau,2,50.0
+excel,1,25.0
