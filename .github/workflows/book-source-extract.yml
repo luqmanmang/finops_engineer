@@ -41,7 +41,7 @@ jobs:
       - name: Commit generated textbook artifacts
         shell: bash
         run: |
-          if git diff --quiet -- research/books/cloud_finops_2e; then
+          if [ -z "$(git status --porcelain -- research/books/cloud_finops_2e)" ]; then
             echo "Generated textbook artifacts are already current."
             exit 0
           fi
