@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0007",
+  "company": "Coforge",
+  "job_title": "FinOps Engineer",
+  "seniority": "Mid-Senior",
+  "location": "Kuala Lumpur, Malaysia",
+  "employment_type": "Contract",
+  "job_url": "https://www.linkedin.com/jobs/view/4445718197/",
+  "source": "LinkedIn - Coforge",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "Banking / IT services",
+  "company_type": "IT services and consulting",
+  "role_summary": "FinOps Engineer role focused on cloud financial management, governance, allocation and optimization across multi-cloud infrastructure for a financial-services environment.",
+  "responsibility_text": "Monitor and optimize cloud costs; develop governance and accountability frameworks; create allocation, chargeback and showback models; produce dashboards, forecasts and budget reports; identify optimization opportunities; partner with Engineering, Finance, Procurement and Business stakeholders.",
+  "requirement_text": "FinOps Framework; AWS, Azure and OCI cost management; CloudHealth, Apptio Cloudability or Finout; financial reporting and forecasting; Power BI or Tableau; Excel; cloud governance and resource optimization; stakeholder and vendor management.",
+  "preferred_text": "Financial-services cloud financial operations experience preferred.",
+  "manual_overrides": {}
+}
