@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0009",
+  "company": "Softenger",
+  "job_title": "FinOps Engineer",
+  "seniority": "Not specified",
+  "location": "Kuala Lumpur, Malaysia",
+  "employment_type": "Full-time",
+  "job_url": "https://getmalaysiajobs.com/jobs/view/finops-engineer",
+  "source": "GetMalaysiaJobs - Softenger",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "IT services / insurance client",
+  "company_type": "IT services company",
+  "role_summary": "FinOps Engineer role for AWS, OCI and hybrid environments, emphasizing insurance-sector cost optimization, automation, reporting and governance.",
+  "responsibility_text": "Optimize AWS, OCI and hybrid cloud spend; rightsizing and reserved-instance strategies; cost dashboards; anomaly remediation; tagging, allocation, chargeback and showback; budgeting and forecasting; automate cost reporting and alerts with Python and Terraform; integrate FinOps controls into CI/CD; track unit economics; collaborate with Cloud Engineering, Finance, Security, Product Owners and Business teams.",
+  "requirement_text": "AWS and OCI pricing and billing; CloudHealth, Apptio, Flexera or Cloudability; Python; Terraform; Power BI, QuickSight, Grafana or OCI Analytics; governance, auditability and cost transparency; financial modelling and stakeholder management.",
+  "preferred_text": "FinOps Certified Practitioner or Professional; AWS Cloud Financial Management certification; Azure cost certification; Google Cloud Digital Leader; CCSP; Power BI Data Analyst Associate.",
+  "manual_overrides": {}
+}
