@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0009",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://getmalaysiajobs.com/jobs/view/finops-engineer",
+  "source": "GetMalaysiaJobs - Softenger",
+  "status_evidence": "GetMalaysiaJobs displayed Apply Now, Full Time, Kuala Lumpur and a recent posting age for the Softenger vacancy when checked.",
+  "title_evidence": "Observed title is FinOps Engineer.",
+  "location_evidence": "Observed location is Kuala Lumpur, Malaysia.",
+  "notes": "Role text is similar to other insurance-sector AWS/OCI FinOps hiring, but no explicit syndication or shared requisition identifier with NTT DATA was confirmed, so this employer posting is retained as a separate vacancy."
+}
