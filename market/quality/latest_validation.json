@@ -1,12 +1,20 @@
 {
-  "generated_at": "2026-09-29T19:12:15+00:00",
+  "generated_at": "2026-09-29T19:24:00+00:00",
   "target_population_requested": 50,
-  "raw_record_count": 5,
-  "evidence_record_count": 5,
-  "verified_active_exact_title_population": 4,
-  "coverage": "4 / 50",
-  "rejected_count": 1,
+  "raw_record_count": 9,
+  "evidence_record_count": 9,
+  "verified_active_exact_title_population": 7,
+  "coverage": "7 / 50",
+  "rejected_count": 2,
   "rejected": [
+    {
+      "vacancy_id": "MY-FE-0004",
+      "job_url": "https://my.linkedin.com/jobs/view/cloud-finops-engineer-at-agensi-pekerjaan-jobscoper-sdn-bhd-4468489755",
+      "reasons": [
+        "duplicate_underlying_vacancy"
+      ],
+      "duplicate_of": "MY-FE-0006"
+    },
     {
       "vacancy_id": "MY-FE-0005",
       "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-net2source-n2s-4467966140",

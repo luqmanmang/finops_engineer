@@ -100,6 +100,23 @@ class MarketCensusUnitTests(unittest.TestCase):
         }
         self.assertIn("malaysia_not_verified", market_census.eligibility_reasons(raw, evidence))
 
+    def test_duplicate_underlying_vacancy_is_rejected(self):
+        raw = {
+            "active_status": True,
+            "job_title": "Cloud FinOps Engineer",
+            "job_url": "https://example.com/agency",
+            "source": "Agency",
+        }
+        evidence = {
+            "active_status": True,
+            "title_verified": True,
+            "malaysia_verified": True,
+            "job_url": "https://example.com/agency",
+            "source": "Agency",
+            "duplicate_of": "MY-FE-0006",
+        }
+        self.assertIn("duplicate_underlying_vacancy", market_census.eligibility_reasons(raw, evidence))
+
     def test_duplicate_url_is_rejected(self):
         rows = [
             {"vacancy_id": "MY-FE-0001", "job_url": "https://example.com/a"},

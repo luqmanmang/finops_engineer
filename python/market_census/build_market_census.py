@@ -138,6 +138,13 @@ def validate_evidence(record: dict[str, Any], path: Path) -> list[str]:
         errors.append(f"{path}: checked_at must be ISO-8601 datetime")
     if record.get("job_url") and not valid_url(record["job_url"]):
         errors.append(f"{path}: invalid job_url")
+    if record.get("duplicate_of"):
+        if not ID_RE.fullmatch(str(record["duplicate_of"])):
+            errors.append(f"{path}: duplicate_of must be a valid vacancy_id")
+        if record.get("duplicate_of") == record.get("vacancy_id"):
+            errors.append(f"{path}: duplicate_of cannot reference itself")
+    if "duplicate_reason" in record and record.get("duplicate_reason") not in (None, "") and not isinstance(record.get("duplicate_reason"), str):
+        errors.append(f"{path}: duplicate_reason must be a string or null")
     for field in ["active_status", "title_verified", "malaysia_verified"]:
         if field in record and not isinstance(record[field], bool):
             errors.append(f"{path}: {field} must be boolean")
@@ -204,6 +211,8 @@ def eligibility_reasons(raw: dict[str, Any], evidence: dict[str, Any] | None) ->
         reasons.append("title_not_verified")
     if not evidence.get("malaysia_verified"):
         reasons.append("malaysia_not_verified")
+    if evidence.get("duplicate_of"):
+        reasons.append("duplicate_underlying_vacancy")
     if raw.get("job_url") != evidence.get("job_url"):
         reasons.append("url_mismatch")
     if raw.get("source") != evidence.get("source"):
@@ -296,7 +305,10 @@ def build(write_outputs: bool = True) -> dict[str, Any]:
         evidence = evidence_by_id.get(raw["vacancy_id"])
         reasons = eligibility_reasons(raw, evidence)
         if reasons:
-            rejected.append({"vacancy_id": raw["vacancy_id"], "job_url": raw.get("job_url"), "reasons": reasons})
+            rejected_entry = {"vacancy_id": raw["vacancy_id"], "job_url": raw.get("job_url"), "reasons": reasons}
+            if evidence and evidence.get("duplicate_of"):
+                rejected_entry["duplicate_of"] = evidence.get("duplicate_of")
+            rejected.append(rejected_entry)
             continue
         canonical.append(canonicalize(raw, evidence, signal_fields, keywords))
 

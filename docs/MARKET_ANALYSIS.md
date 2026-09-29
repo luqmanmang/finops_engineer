@@ -5,9 +5,9 @@
 ## Population
 
 - Target population requested: **50**
-- Verified active exact-title population: **4**
-- Coverage achieved: **4 / 50**
-- Rejected/non-canonical raw records: **1**
+- Verified active exact-title population: **7**
+- Coverage achieved: **7 / 50**
+- Rejected/non-canonical raw records: **2**
 
 The canonical population contains only records with matching evidence confirming active status, Malaysia scope, and the contiguous title phrase `FinOps Engineer`.
 
@@ -15,48 +15,48 @@ The canonical population contains only records with matching evidence confirming
 
 | capability | Count | % |
 |---|---:|---:|
-| governance | 4 | 100.00 |
-| anomaly_management | 3 | 75.00 |
-| budgeting | 3 | 75.00 |
-| cost_visibility | 3 | 75.00 |
-| forecasting | 3 | 75.00 |
-| reserved_instances | 3 | 75.00 |
-| rightsizing | 3 | 75.00 |
-| tagging | 3 | 75.00 |
-| allocation | 2 | 50.00 |
-| chargeback | 2 | 50.00 |
-| cost_analysis | 2 | 50.00 |
-| savings_plans | 2 | 50.00 |
-| showback | 2 | 50.00 |
-| commitment_management | 1 | 25.00 |
-| idle_resource_management | 1 | 25.00 |
+| governance | 7 | 100.00 |
+| forecasting | 6 | 85.71 |
+| budgeting | 5 | 71.43 |
+| chargeback | 5 | 71.43 |
+| rightsizing | 5 | 71.43 |
+| showback | 5 | 71.43 |
+| allocation | 4 | 57.14 |
+| cost_visibility | 4 | 57.14 |
+| reserved_instances | 4 | 57.14 |
+| tagging | 4 | 57.14 |
+| anomaly_management | 3 | 42.86 |
+| savings_plans | 3 | 42.86 |
+| cost_analysis | 2 | 28.57 |
+| procurement | 2 | 28.57 |
+| unit_economics | 2 | 28.57 |
 
 ## Cloud platforms
 
 | cloud | Count | % |
 |---|---:|---:|
-| aws | 4 | 100.00 |
-| multi_cloud | 4 | 100.00 |
-| azure | 2 | 50.00 |
-| gcp | 1 | 25.00 |
-| oci | 1 | 25.00 |
+| aws | 7 | 100.00 |
+| multi_cloud | 7 | 100.00 |
+| azure | 5 | 71.43 |
+| oci | 4 | 57.14 |
+| gcp | 3 | 42.86 |
 
 ## Engineering / automation skills
 
 | skill | Count | % |
 |---|---:|---:|
-| power_bi | 3 | 75.00 |
-| python | 3 | 75.00 |
-| sql | 3 | 75.00 |
-| api | 2 | 50.00 |
-| automation | 2 | 50.00 |
-| cicd | 2 | 50.00 |
-| tableau | 2 | 50.00 |
-| terraform | 2 | 50.00 |
-| bash | 1 | 25.00 |
-| excel | 1 | 25.00 |
-| kubernetes | 1 | 25.00 |
-| powershell | 1 | 25.00 |
+| power_bi | 5 | 71.43 |
+| python | 4 | 57.14 |
+| automation | 3 | 42.86 |
+| cicd | 3 | 42.86 |
+| sql | 3 | 42.86 |
+| tableau | 3 | 42.86 |
+| terraform | 3 | 42.86 |
+| api | 2 | 28.57 |
+| excel | 2 | 28.57 |
+| kubernetes | 2 | 28.57 |
+| bash | 1 | 14.29 |
+| powershell | 1 | 14.29 |
 | bicep | 0 | 0.00 |
 | databricks | 0 | 0.00 |
 | fabric | 0 | 0.00 |
@@ -65,42 +65,46 @@ The canonical population contains only records with matching evidence confirming
 
 | industry | Count | % |
 |---|---:|---:|
-| Energy and chemicals | 1 | 25.00 |
-| IT services and consulting | 1 | 25.00 |
-| Recruitment / medical and travel security client | 1 | 25.00 |
-| Video game commerce technology | 1 | 25.00 |
+| IT services and consulting | 2 | 28.57 |
+| Banking / IT services | 1 | 14.29 |
+| Energy and chemicals | 1 | 14.29 |
+| Health and security services | 1 | 14.29 |
+| IT services / insurance client | 1 | 14.29 |
+| Video game commerce technology | 1 | 14.29 |
 
 ## Seniority
 
 | seniority | Count | % |
 |---|---:|---:|
-| Entry level | 1 | 25.00 |
-| Semi-senior | 1 | 25.00 |
-| Senior | 1 | 25.00 |
-| Upcoming/recent graduate | 1 | 25.00 |
+| Not specified | 2 | 28.57 |
+| Entry level | 1 | 14.29 |
+| Experienced | 1 | 14.29 |
+| Mid-Senior | 1 | 14.29 |
+| Senior | 1 | 14.29 |
+| Upcoming/recent graduate | 1 | 14.29 |
 
 ## Stakeholder expectations
 
 | stakeholder | Count | % |
 |---|---:|---:|
-| finance | 4 | 100.00 |
-| business_units | 3 | 75.00 |
-| engineering | 3 | 75.00 |
-| management | 3 | 75.00 |
-| procurement_stakeholder | 1 | 25.00 |
+| management | 7 | 100.00 |
+| business_units | 5 | 71.43 |
+| finance | 4 | 57.14 |
+| engineering | 2 | 28.57 |
+| procurement_stakeholder | 2 | 28.57 |
 | vendor_management_stakeholder | 0 | 0.00 |
 
 ## Certification demand
 
 | certification | Count | % |
 |---|---:|---:|
-| finops_practitioner | 4 | 100.00 |
-| aws_certification | 2 | 50.00 |
-| azure_certification | 2 | 50.00 |
-| finops_engineer_certification | 1 | 25.00 |
-| gcp_certification | 1 | 25.00 |
-| power_bi_certification | 1 | 25.00 |
-| security_certification | 1 | 25.00 |
+| finops_practitioner | 5 | 71.43 |
+| aws_certification | 3 | 42.86 |
+| azure_certification | 2 | 28.57 |
+| gcp_certification | 2 | 28.57 |
+| power_bi_certification | 2 | 28.57 |
+| security_certification | 2 | 28.57 |
+| finops_engineer_certification | 1 | 14.29 |
 | finops_professional | 0 | 0.00 |
 
 ## Recurring interview-risk areas
