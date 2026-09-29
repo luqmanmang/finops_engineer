@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0003",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://jobs.lever.co/xsolla/b5dd3386-d709-4009-a294-2d505a3bf219",
+  "source": "Xsolla Lever Careers",
+  "status_evidence": "Xsolla Lever page displayed an apply action when checked.",
+  "title_evidence": "Lever page title is FinOps engineer; matching is case-insensitive under the project contract.",
+  "location_evidence": "Lever page lists Kuala Lumpur among the role locations.",
+  "notes": "Official employer recruiting page used."
+}

@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0001",
+  "company": "ExxonMobil",
+  "job_title": "FinOps Engineer",
+  "seniority": "Upcoming/recent graduate",
+  "location": "Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+  "employment_type": null,
+  "job_url": "https://jobs.exxonmobil.com/job/Kuala-Lumpur-FinOps-Engineer-Fede-50088/1384826700/",
+  "source": "ExxonMobil Careers",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "Energy and chemicals",
+  "company_type": "Public company",
+  "role_summary": "FinOps Engineer focused on cloud cost optimization, cost visibility, efficient cloud usage and reporting.",
+  "responsibility_text": "Cloud cost analysis and cost visibility; identify unused or underused resources; rightsizing; budgeting and purchase planning with Finance and Procurement; cost optimization reporting to management; governance policies and cost controls in CI/CD.",
+  "requirement_text": "AWS and Azure cost management; Excel, Power BI and Tableau; Savings Plans, Reserved Instances, Spot and rightsizing; PowerShell, Python, Bash and SQL for automation; cloud architecture and communication skills.",
+  "preferred_text": "AWS Certified Cloud Practitioner; Azure Fundamentals AZ-900; FinOps Certified Practitioner; Agile or Scrum familiarity.",
+  "manual_overrides": {}
+}

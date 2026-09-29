@@ -11,7 +11,7 @@ DISCOVER
   ↓
 ASSIGN IMMUTABLE ID
   ↓
-CAPTURE RAW SOURCE FIELDS
+CAPTURE SOURCE-DERIVED FIELDS
   ↓
 VERIFY ACTIVE + TITLE + MALAYSIA SCOPE
   ↓
@@ -28,31 +28,19 @@ MARKET ANALYSIS
 
 ## Step 1 — Assign ID
 
-Use the next unused ID:
-
-```text
-MY-FE-0001
-```
-
-ID behaves like a primary key. Never recycle it for another vacancy.
+Use the next unused ID, for example `MY-FE-0001`. ID behaves like a primary key and must never be recycled for another vacancy.
 
 ## Step 2 — Raw record
 
-Copy `market/templates/vacancy_record.template.json` to:
+Copy `market/templates/vacancy_record.template.json` to `market/raw/MY-FE-0001.json`.
 
-```text
-market/raw/MY-FE-0001.json
-```
+Populate source-derived facts. Preserve exact names, technologies, qualifications and short evidence phrases, but paraphrase long copyrighted vacancy prose before committing it to the public repository. Keep source facts separate from interpretation.
 
-Populate source-derived fields. Keep vacancy wording separate from your interpretation.
+Where the same underlying vacancy is syndicated across multiple job boards or recruiter URLs, keep one canonical vacancy record when employer, role, location and materially identical description indicate the same opening. Record the chosen source URL and avoid inflating market frequency with duplicate syndications.
 
 ## Step 3 — Evidence record
 
-Copy `market/templates/evidence_record.template.json` to:
-
-```text
-market/evidence/MY-FE-0001.json
-```
+Copy `market/templates/evidence_record.template.json` to `market/evidence/MY-FE-0001.json`.
 
 Record the verification timestamp and evidence for active status, exact title, and Malaysia scope.
 
@@ -66,30 +54,7 @@ Fix hard contract failures before building derived outputs.
 
 ## Step 5 — Deterministic classification
 
-The builder scans the four source-text fields against `market/schemas/signal_taxonomy.json`.
-
-A keyword match creates a candidate signal. For example:
-
-```text
-"Terraform automation on AWS"
-        ↓
-terraform = true
-automation = true
-aws = true
-```
-
-If the deterministic rule is wrong for a specific vacancy, document the correction using `manual_overrides`:
-
-```json
-{
-  "manual_overrides": {
-    "python": false,
-    "terraform": true
-  }
-}
-```
-
-This is preferable to silently editing generated CSV columns.
+The builder scans the four source-text fields against `market/schemas/signal_taxonomy.json`. A keyword match creates a candidate signal. Use `manual_overrides` only to document a source-backed correction to deterministic classification; do not silently hand-edit generated CSV columns.
 
 ## Step 6 — Eligibility gate
 
@@ -115,29 +80,11 @@ Related titles are valid research leads but are not canonical census members.
 make market-build
 ```
 
-Generated outputs:
-
-```text
-market/malaysia_finops_engineer_vacancies.csv
-market/malaysia_finops_engineer_vacancies.json
-market/vacancy_skill_matrix.csv
-market/skill_frequency.csv
-market/finops_capability_frequency.csv
-market/cloud_frequency.csv
-market/platform_frequency.csv
-market/language_frequency.csv
-market/bi_tool_frequency.csv
-market/industry_frequency.csv
-market/seniority_frequency.csv
-market/quality/latest_validation.json
-docs/MARKET_ANALYSIS.md
-```
+Generated outputs include the canonical CSV/JSON, skill matrix, FinOps capability, cloud, platform, language, BI-tool, industry and seniority frequencies, the quality report and `docs/MARKET_ANALYSIS.md`.
 
 ## Step 8 — Review QA report
 
-Never quote the requested target as though it were observed market size.
-
-Report exactly:
+Never quote the requested target as though it were observed market size. Report exactly:
 
 ```text
 Target population requested: 50
@@ -149,7 +96,7 @@ Coverage achieved: N / 50
 
 ### Source fact
 
-Raw title, description, requirements, location, source URL, active state evidence.
+Title, employer, location, source URL, active-state evidence and source-backed technologies/requirements.
 
 ### Deterministic derived signal
 
@@ -157,7 +104,7 @@ Keyword-classified fields such as `terraform = true` or `rightsizing = true`.
 
 ### Human analysis
 
-Why the market signal matters, interview-risk interpretation, learning priority, and resume gap.
+Why the market signal matters, interview-risk interpretation, learning priority and resume gap.
 
 Do not collapse these three layers into one.
 

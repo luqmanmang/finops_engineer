@@ -2,7 +2,8 @@
   "cloud": {
     "aws": ["aws", "amazon web services"],
     "azure": ["azure", "microsoft azure"],
-    "gcp": ["gcp", "google cloud", "google cloud platform"]
+    "gcp": ["gcp", "google cloud", "google cloud platform"],
+    "oci": ["oci", "oracle cloud", "oracle cloud infrastructure"]
   },
   "finops_capability": {
     "cost_visibility": ["cost visibility", "cost transparency", "spend visibility"],
@@ -52,11 +53,11 @@
     "excel": ["excel", "microsoft excel"]
   },
   "stakeholder": {
-    "finance": ["finance team", "finance teams", "finance stakeholder", "finance organization", "finance organisation"],
-    "engineering": ["engineering team", "engineering teams", "engineering stakeholder"],
-    "procurement_stakeholder": ["procurement team", "procurement teams", "procurement stakeholder"],
-    "management": ["senior management", "executive stakeholder", "leadership team"],
-    "business_units": ["business unit", "business units", "business stakeholder"],
+    "finance": ["finance team", "finance teams", "finance stakeholder", "finance organization", "finance organisation", "finance and"],
+    "engineering": ["engineering team", "engineering teams", "engineering stakeholder", "engineering and"],
+    "procurement_stakeholder": ["procurement team", "procurement teams", "procurement stakeholder", "procurement"],
+    "management": ["senior management", "executive stakeholder", "leadership team", "management"],
+    "business_units": ["business unit", "business units", "business stakeholder", "product team", "product teams"],
     "vendor_management_stakeholder": ["vendor management team", "vendor manager", "vendor managers"]
   }
 }

@@ -1,0 +1,21 @@
+{
+  "vacancy_id": "MY-FE-0003",
+  "company": "Xsolla",
+  "job_title": "FinOps engineer",
+  "seniority": "Senior",
+  "location": "Kuala Lumpur / Baku / Serbia",
+  "employment_type": "Full-time",
+  "job_url": "https://jobs.lever.co/xsolla/b5dd3386-d709-4009-a294-2d505a3bf219",
+  "source": "Xsolla Lever Careers",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "Video game commerce technology",
+  "company_type": "Technology company",
+  "role_summary": "Senior FinOps role leading cloud and infrastructure financial management across GCP, AWS and on-prem environments, with Kuala Lumpur included in the hiring locations.",
+  "responsibility_text": "Cloud cost optimization across GCP, AWS and on-prem; compute, storage, network and Kubernetes usage analysis; forecasting and cost dashboards; tagging, budgeting and governance; architecture and workload-placement decisions; rightsizing, reservation planning and autoscaling; anomaly detection, usage attribution and FinOps reviews.",
+  "requirement_text": "GCP and AWS; Kubernetes; GCP billing exports, BigQuery, AWS CUR, Kubecost and CloudHealth; SQL-based pipelines; forecasting models; engineering, product and Finance collaboration.",
+  "preferred_text": "GCP or AWS professional-level certification; FinOps Certified Practitioner; chargeback/showback; Terraform, Helm or GitOps; data analytics, cloud architecture or financial modelling.",
+  "manual_overrides": {
+    "commitment_management": true
+  }
+}

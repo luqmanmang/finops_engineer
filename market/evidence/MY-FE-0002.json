@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0002",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://careers-inc.nttdata.com/job/Kuala-Lumpur-FinOps-Engineer-14/1434167400/",
+  "source": "NTT DATA Careers",
+  "status_evidence": "Official NTT DATA careers result showed Apply now and a Sep 26, 2026 posting date.",
+  "title_evidence": "Official careers result title is FinOps Engineer, Req ID 387488.",
+  "location_evidence": "Official careers result lists Kuala Lumpur, Malaysia.",
+  "notes": "Official employer source is canonical; LinkedIn was used only as a cross-check for employment type and seniority."
+}

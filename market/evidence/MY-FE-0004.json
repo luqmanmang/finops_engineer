@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0004",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://my.linkedin.com/jobs/view/cloud-finops-engineer-at-agensi-pekerjaan-jobscoper-sdn-bhd-4468489755",
+  "source": "LinkedIn - JobScoper",
+  "status_evidence": "LinkedIn listing displayed an Apply action and was surfaced as a current posting when checked.",
+  "title_evidence": "Listing title is Cloud FinOps Engineer, which contains the contiguous phrase FinOps Engineer.",
+  "location_evidence": "Listing location is Kuala Lumpur, Malaysia.",
+  "notes": "Multiple syndications with substantially identical content were treated as one underlying vacancy to avoid double counting."
+}

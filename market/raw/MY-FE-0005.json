@@ -1,0 +1,22 @@
+{
+  "vacancy_id": "MY-FE-0005",
+  "company": "Net2Source Inc.",
+  "job_title": "FinOps Engineer",
+  "seniority": "Semi-senior",
+  "location": "Kuala Lumpur, Malaysia",
+  "employment_type": "Contract",
+  "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-net2source-n2s-4467966140",
+  "source": "LinkedIn - Net2Source",
+  "date_checked": "2026-09-30",
+  "active_status": false,
+  "industry": "IT services and recruiting",
+  "company_type": "Recruitment / services company",
+  "role_summary": "FinOps Engineer contract role in Kuala Lumpur for AWS, OCI and hybrid cloud financial operations.",
+  "responsibility_text": "Cloud cost analysis; rightsizing, Reserved Instances, storage lifecycle and anomaly management; tagging, chargeback/showback, allocation, budgeting and forecasting; Python and Terraform automation; CI/CD policy controls; unit economics and stakeholder reporting.",
+  "requirement_text": "AWS and OCI pricing; CloudHealth, Apptio, Flexera or Cloudability; Python; Terraform; Power BI, QuickSight, Grafana or OCI Analytics.",
+  "preferred_text": "FinOps certification; AWS cloud financial management; Azure cost management; Google Cloud Digital Leader; CCSP; Power BI certification.",
+  "manual_overrides": {
+    "azure": false,
+    "gcp": false
+  }
+}
