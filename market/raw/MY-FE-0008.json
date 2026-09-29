@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0008",
+  "company": "Encora",
+  "job_title": "Cloud Project Manager – FinOps engineer",
+  "seniority": "Experienced",
+  "location": "Kuala Lumpur, Malaysia",
+  "employment_type": "Contract",
+  "job_url": "https://malaysia.indeed.com/viewjob?jk=a88eab18260c9771",
+  "source": "Indeed - Encora",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": "IT services and consulting",
+  "company_type": "Technology services company",
+  "role_summary": "Cloud project-management role with FinOps engineering responsibilities across hybrid and multi-cloud transformation, cost optimization and governance.",
+  "responsibility_text": "Lead cloud transformation and FinOps projects; optimize AWS, Azure, OCI and GCP costs; manage governance, chargeback/showback, budgets and forecasts; analyze infrastructure spend; manage project scope, risks and dependencies; support TCO, ROI and business cases; oversee vendors and executive reporting.",
+  "requirement_text": "IT project or program management; FinOps or cloud cost management; AWS, Azure, OCI and GCP; hybrid and multi-cloud infrastructure; rightsizing, Reserved Instances and Savings Plans; budgeting, forecasting, TCO, ROI, financial modelling; stakeholder and vendor management; enterprise infrastructure and Kubernetes.",
+  "preferred_text": "FinOps certification; PMP or PRINCE2; banking or regulated-industry experience; governance, risk, compliance and audit knowledge.",
+  "manual_overrides": {}
+}
