@@ -1,0 +1,49 @@
+requirement_key,category,observed_count,observed_pct,learning_depth,theory,explanation,example,step_by_step,lab_or_proof,dashboard,interview,learning_status,artifact
+aws,cloud,7,100.0,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+azure,cloud,5,71.43,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+gcp,cloud,3,42.86,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+oci,cloud,4,57.14,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+cost_visibility,finops_capability,4,57.14,deep,yes,yes,yes,yes,reference_or_interview_only,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+allocation,finops_capability,4,57.14,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+tagging,finops_capability,4,57.14,deep,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+cost_analysis,finops_capability,2,28.57,strong,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+anomaly_management,finops_capability,3,42.86,strong,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+budgeting,finops_capability,5,71.43,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+forecasting,finops_capability,6,85.71,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+rightsizing,finops_capability,5,71.43,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+usage_optimization,finops_capability,1,14.29,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+savings_plans,finops_capability,3,42.86,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+reserved_instances,finops_capability,4,57.14,deep,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+commitment_management,finops_capability,1,14.29,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+showback,finops_capability,5,71.43,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+chargeback,finops_capability,5,71.43,deep,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+unit_economics,finops_capability,2,28.57,strong,yes,yes,yes,yes,reference_or_interview_only,yes,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+vendor_management,finops_capability,2,28.57,strong,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+procurement,finops_capability,2,28.57,strong,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+governance,finops_capability,7,100.0,deep,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+policy,finops_capability,1,14.29,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/KNOWLEDGE_MAP.md; docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+sql,engineering_tool,3,42.86,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+python,engineering_tool,4,57.14,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+bash,engineering_tool,1,14.29,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+powershell,engineering_tool,1,14.29,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+terraform,engineering_tool,3,42.86,strong,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+cicd,engineering_tool,3,42.86,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+api,engineering_tool,2,28.57,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+automation,engineering_tool,3,42.86,strong,yes,yes,yes,yes,planned_or_existing_lab_path,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+kubernetes,engineering_tool,2,28.57,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+power_bi,engineering_tool,5,71.43,strong,yes,yes,yes,yes,planned_or_existing_lab_path,yes,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+tableau,engineering_tool,3,42.86,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+excel,engineering_tool,2,28.57,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+finance,stakeholder,4,57.14,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+engineering,stakeholder,2,28.57,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+procurement_stakeholder,stakeholder,2,28.57,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+management,stakeholder,7,100.0,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+business_units,stakeholder,5,71.43,working,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
+finops_practitioner,certification,5,71.43,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+finops_engineer_certification,certification,1,14.29,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+aws_certification,certification,3,42.86,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+azure_certification,certification,2,28.57,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+gcp_certification,certification,2,28.57,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+security_certification,certification,2,28.57,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+power_bi_certification,certification,2,28.57,working,yes,yes,yes,yes,certification_path_only,not_required,yes,COMPLETE,docs/VOLUME_3_CERTIFICATION_INTERVIEW_TRANSFER.md
+multi_cloud,cloud,7,100.0,strong,yes,yes,yes,yes,reference_or_interview_only,not_required,yes,COMPLETE,docs/VOLUME_2_JD_COVERAGE_HANDBOOK.md
