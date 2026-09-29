@@ -41,6 +41,40 @@ class MarketCensusUnitTests(unittest.TestCase):
         self.assertTrue(signals["multi_cloud"])
         self.assertFalse(signals["python"])
 
+    def test_oci_is_classified_and_counts_as_multi_cloud(self):
+        taxonomy = {
+            "cloud": {"aws": ["aws"], "azure": ["azure"], "gcp": ["gcp"], "oci": ["oci", "oracle cloud"]},
+        }
+        fields, keywords, _ = market_census.flatten_taxonomy(taxonomy)
+        record = {
+            "role_summary": "Operate AWS and OCI cloud cost management.",
+            "responsibility_text": "",
+            "requirement_text": "",
+            "preferred_text": "",
+            "manual_overrides": {},
+        }
+        signals = market_census.classify(record, fields, keywords)
+        self.assertTrue(signals["aws"])
+        self.assertTrue(signals["oci"])
+        self.assertTrue(signals["multi_cloud"])
+        self.assertIn("oci", market_census.DERIVED_OUTPUTS["cloud_frequency.csv"][1])
+
+    def test_certification_taxonomy_is_source_backed(self):
+        taxonomy = market_census.load_json(market_census.TAXONOMY_PATH)
+        fields, keywords, groups = market_census.flatten_taxonomy(taxonomy)
+        record = {
+            "role_summary": "",
+            "responsibility_text": "",
+            "requirement_text": "",
+            "preferred_text": "FinOps Certified Practitioner and Azure Fundamentals AZ-900.",
+            "manual_overrides": {},
+        }
+        signals = market_census.classify(record, fields, keywords)
+        self.assertTrue(signals["finops_practitioner"])
+        self.assertTrue(signals["azure_certification"])
+        self.assertIn("certification", groups)
+        self.assertIn("certification_frequency.csv", market_census.DERIVED_OUTPUTS)
+
     def test_eligibility_requires_evidence(self):
         raw = {
             "active_status": True,
@@ -65,6 +99,23 @@ class MarketCensusUnitTests(unittest.TestCase):
             "source": "Example",
         }
         self.assertIn("malaysia_not_verified", market_census.eligibility_reasons(raw, evidence))
+
+    def test_duplicate_underlying_vacancy_is_rejected(self):
+        raw = {
+            "active_status": True,
+            "job_title": "Cloud FinOps Engineer",
+            "job_url": "https://example.com/agency",
+            "source": "Agency",
+        }
+        evidence = {
+            "active_status": True,
+            "title_verified": True,
+            "malaysia_verified": True,
+            "job_url": "https://example.com/agency",
+            "source": "Agency",
+            "duplicate_of": "MY-FE-0006",
+        }
+        self.assertIn("duplicate_underlying_vacancy", market_census.eligibility_reasons(raw, evidence))
 
     def test_duplicate_url_is_rejected(self):
         rows = [

@@ -82,6 +82,7 @@ Automation does **not** infer active status, Malaysia scope, industry, company t
 - `platform_frequency.csv`
 - `language_frequency.csv`
 - `bi_tool_frequency.csv`
+- `certification_frequency.csv`
 - `industry_frequency.csv`
 - `seniority_frequency.csv`
 

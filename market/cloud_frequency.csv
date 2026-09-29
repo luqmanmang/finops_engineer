@@ -1,1 +1,6 @@
-cloud,vacancy_count,vacancy_pct
+cloud,count,percentage
+aws,7,100.0
+multi_cloud,7,100.0
+azure,5,71.43
+oci,4,57.14
+gcp,3,42.86

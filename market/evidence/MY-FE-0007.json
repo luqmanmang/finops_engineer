@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0007",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://www.linkedin.com/jobs/view/4445718197/",
+  "source": "LinkedIn - Coforge",
+  "status_evidence": "Direct LinkedIn requisition remained live during the dedicated cross-source audit, showed Apply, and was listed as posted 3 days ago.",
+  "title_evidence": "Observed direct LinkedIn listing title is FinOps Engineer.",
+  "location_evidence": "Observed location is Federal Territory of Kuala Lumpur, Malaysia.",
+  "notes": "Indeed currently surfaces a separate Coforge FinOps Analyst (Hybrid Infrastructure) requisition in Kuala Lumpur. That does not replace or invalidate LinkedIn job ID 4445718197, which remains a distinct live exact-title FinOps Engineer requisition. Alternate LinkedIn renderings sharing job ID 4445718197 are treated as the same requisition."
+}

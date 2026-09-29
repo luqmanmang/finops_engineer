@@ -1,1 +1,5 @@
-language,vacancy_count,vacancy_pct
+language,count,percentage
+python,4,57.14
+sql,3,42.86
+bash,1,14.29
+powershell,1,14.29

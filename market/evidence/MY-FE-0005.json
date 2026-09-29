@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0005",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": false,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://my.linkedin.com/jobs/view/finops-engineer-at-net2source-n2s-4467966140",
+  "source": "LinkedIn - Net2Source",
+  "status_evidence": "LinkedIn explicitly stated that the posting was no longer accepting applications when checked.",
+  "title_evidence": "Listing title is FinOps Engineer.",
+  "location_evidence": "Listing states Kuala Lumpur, Malaysia.",
+  "notes": "Kept as a rejected candidate to prove the active-status gate. A second near-identical Net2Source syndication was not added separately."
+}
