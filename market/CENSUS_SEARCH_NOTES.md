@@ -5,46 +5,66 @@
 - Research date: **2026-09-30**
 - Requested target: **up to 50**
 - Inclusion rule: currently active Malaysia vacancy whose observed title contains the contiguous phrase `FinOps Engineer` (case-insensitive).
-- Current verified active unique population: **4**
-- Rejected candidate records retained for audit: **1 inactive**
+- Raw candidate records retained: **9**
+- Evidence records retained: **9**
+- Current verified active unique canonical population: **7**
+- Rejected/non-canonical records: **2** — one active duplicate syndication and one inactive posting.
+- Coverage: **7 / 50**
+
+The target is an upper bound, not a quota to pad. Under the locked Source-of-Truth rule, the census stops at the source-verifiable `N` when fewer than 50 unique active qualifying vacancies can be verified.
 
 ## Research approach
 
-Discovery used broad public-web searches and direct verification against accessible employer or job-platform pages. Search patterns included the exact phrase `FinOps Engineer` together with Malaysia, Kuala Lumpur, Cyberjaya and common seniority/title variants. Discovery covered official employer career pages and indexed job platforms including LinkedIn and regional job-board results.
+Discovery used repeated broad public-web searches and direct verification against accessible employer and job-platform pages. Search patterns covered the exact phrase `FinOps Engineer`, `Senior FinOps Engineer`, `Lead FinOps Engineer`, `Cloud FinOps Engineer`, and other titles containing the same contiguous phrase, combined with Malaysia, Kuala Lumpur, Selangor, Cyberjaya, Penang and Johor.
 
-Every included vacancy required a matching record under `market/evidence/` confirming active state, title and Malaysia scope at the collection snapshot.
+The search pass covered official employer career pages plus indexed sources including LinkedIn, Indeed, JobStreet-oriented queries, Jora, Maukerja, Ricebowl and other regional job indexes. Company/recruiter-specific searches were also used after candidate discovery. Results were reconciled by employer, requisition/job ID, title, location and materially matching role content so mirrors were not counted as independent demand.
+
+Every canonical vacancy requires a matching record under `market/evidence/` confirming active state, title and Malaysia scope at the collection snapshot.
 
 ## Included active unique opportunities
 
-| ID | Company | Observed title | Malaysia evidence source |
+| ID | Company | Observed title | Primary verification source |
 |---|---|---|---|
 | MY-FE-0001 | ExxonMobil | FinOps Engineer | ExxonMobil Careers — Kuala Lumpur |
 | MY-FE-0002 | NTT DATA Services | FinOps Engineer | NTT DATA Careers — Kuala Lumpur |
-| MY-FE-0003 | Xsolla | FinOps engineer | Xsolla Lever Careers — Kuala Lumpur listed among hiring locations |
-| MY-FE-0004 | Agensi Pekerjaan JobScoper Sdn. Bhd. | Cloud FinOps Engineer | LinkedIn — Kuala Lumpur |
+| MY-FE-0003 | Xsolla | FinOps engineer | Xsolla Lever Careers — Kuala Lumpur among hiring locations |
+| MY-FE-0006 | International SOS | FinOps Engineer | LinkedIn direct-employer posting — Kuala Lumpur |
+| MY-FE-0007 | Coforge | FinOps Engineer | LinkedIn — Kuala Lumpur; one requisition/job ID |
+| MY-FE-0008 | Encora | Cloud Project Manager – FinOps engineer | Indeed — Kuala Lumpur |
+| MY-FE-0009 | Softenger | FinOps Engineer | GetMalaysiaJobs — Kuala Lumpur, Apply Now |
 
-## Rejected candidate
+## Rejected / non-canonical records
 
-| ID | Company | Reason |
-|---|---|---|
-| MY-FE-0005 | Net2Source Inc. | Posting explicitly no longer accepting applications at verification time |
+| ID | Company | State | Reason |
+|---|---|---|---|
+| MY-FE-0004 | Agensi Pekerjaan JobScoper Sdn. Bhd. | Active | Duplicate/syndicated representation of the International SOS underlying vacancy; retained for audit but excluded from market frequencies |
+| MY-FE-0005 | Net2Source Inc. | Inactive | Posting explicitly showed that it was no longer accepting applications at verification time |
 
 ## De-duplication decisions
 
-- Multiple JobScoper syndications with materially identical role content were treated as one underlying vacancy rather than separate market demand.
-- Near-identical Net2Source syndications were not multiplied; one inactive candidate record is retained to show the exclusion reason.
-- NTT DATA and Net2Source contain substantially similar FinOps requirements, but they are separate employer postings. NTT DATA was independently verified active through its official careers site; Net2Source was independently verified inactive.
+- **International SOS / JobScoper:** the agency post explicitly describes a global medical and travel security services client and materially matches the direct International SOS role. International SOS is canonical; JobScoper is retained as `duplicate_of = MY-FE-0006`.
+- **ExxonMobil:** MyPetroCareer and other indexed copies were treated as mirrors of the official ExxonMobil vacancy, not extra demand.
+- **Xsolla:** aggregators were reconciled to the active Xsolla Lever posting. A separate Xsolla FinOps posting scoped to CIS/Baku/Serbia is not a Malaysia vacancy and is not counted.
+- **Coforge:** alternate search renderings shared LinkedIn job ID `4445718197`; they are one requisition.
+- **Net2Source:** multiple recruiter postings with materially identical requirements were not multiplied; the verified listings were inactive.
+- **NTT DATA / Softenger:** the roles have overlapping insurance-sector AWS/OCI FinOps requirements, but separate employers and no confirmed shared requisition or explicit syndication relationship were found, so each remains a separate canonical vacancy.
+
+## Search saturation result
+
+After the broad title/location/job-board pass, title-variant pass, company/recruiter follow-up, and duplicate reconciliation, newly surfaced results repeatedly resolved to the same known requisitions, inactive Net2Source posts, or mirrors of canonical vacancies. No additional unique active Malaysia vacancy satisfying the locked contiguous-title rule could be source-verified in the accessible public snapshot.
+
+Therefore **Checkpoint 1 closes at verified `N = 7`, not 50**. This is intentionally different from inventing, padding, counting mirrors, counting inactive roles, or relaxing the title rule simply to reach the requested target.
+
+This is not a claim that no unindexed, private, login-gated, newly published or otherwise inaccessible qualifying vacancy exists. It is the reproducible verified public snapshot for **2026-09-30**.
 
 ## Evidence and copyright handling
 
 The public repository stores structured source facts, named technologies, qualifications and concise verification evidence. Long vacancy descriptions are paraphrased rather than copied verbatim. Source URLs remain attached to each raw/evidence pair for traceability.
 
-## Limitations
+## Interpretation guardrail
 
-This is the verified population found in the documented public-source research pass on 2026-09-30. It is not a claim that no unindexed, private, login-gated, newly published or otherwise inaccessible vacancy exists.
-
-With `N = 4`, one vacancy equals **25 percentage points**. Frequency outputs therefore describe this snapshot only and should not be presented as precise estimates of the entire Malaysia labour market.
+With `N = 7`, one vacancy equals approximately **14.29 percentage points**. Frequency outputs describe this observed snapshot only and must not be presented as precise estimates of the entire Malaysia labour market.
 
 ## Reproducibility rule
 
-Future rechecks should preserve stable vacancy IDs and source history. New unique active vacancies receive new IDs; expired records are not recycled or silently deleted. Re-run `make market-build` after source-backed changes and require the canonical GitHub Actions quality workflow to pass before merge.
+Future rechecks should preserve stable vacancy IDs and source history. New unique active vacancies receive new IDs; expired or duplicate records are not recycled or silently deleted. Re-run `make market-build` after source-backed changes and require the canonical GitHub Actions quality workflow to pass before merge.
