@@ -1,0 +1,67 @@
+name: Checkpoint 1 Census Build
+
+on:
+  push:
+    branches:
+      - checkpoint-1/market-census-2026-09-30
+    paths:
+      - '.github/workflows/checkpoint1-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-build-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: checkpoint-1/market-census-2026-09-30
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Patch OCI classifier and regression test
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          builder = Path('python/market_census/build_market_census.py')
+          text = builder.read_text(encoding='utf-8')
+          old_with_multi = '["aws", "azure", "gcp", "multi_cloud"]'
+          old_clouds = '["aws", "azure", "gcp"]'
+          assert old_with_multi in text, 'cloud frequency list not found'
+          assert old_clouds in text, 'classifier cloud list not found'
+          text = text.replace(old_with_multi, '["aws", "azure", "gcp", "oci", "multi_cloud"]')
+          text = text.replace(old_clouds, '["aws", "azure", "gcp", "oci"]')
+          builder.write_text(text, encoding='utf-8')
+
+          tests = Path('tests/test_market_census.py')
+          test_text = tests.read_text(encoding='utf-8')
+          marker = '    def test_eligibility_requires_evidence(self):\n'
+          assert marker in test_text, 'test insertion marker not found'
+          addition = '''    def test_oci_is_classified_and_counts_as_multi_cloud(self):\n        taxonomy = {\n            "cloud": {"aws": ["aws"], "azure": ["azure"], "gcp": ["gcp"], "oci": ["oci", "oracle cloud"]},\n        }\n        fields, keywords, _ = market_census.flatten_taxonomy(taxonomy)\n        record = {\n            "role_summary": "Operate AWS and OCI cloud cost management.",\n            "responsibility_text": "",\n            "requirement_text": "",\n            "preferred_text": "",\n            "manual_overrides": {},\n        }\n        signals = market_census.classify(record, fields, keywords)\n        self.assertTrue(signals["aws"])\n        self.assertTrue(signals["oci"])\n        self.assertTrue(signals["multi_cloud"])\n        self.assertIn("oci", market_census.DERIVED_OUTPUTS["cloud_frequency.csv"][1])\n\n'''
+          test_text = test_text.replace(marker, addition + marker)
+          tests.write_text(test_text, encoding='utf-8')
+          PY
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Build market outputs
+        run: make market-build
+
+      - name: Validate generated census
+        run: make market-check
+
+      - name: Commit generated outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add python/market_census/build_market_census.py tests/test_market_census.py market docs/MARKET_ANALYSIS.md
+          git commit -m "Build Checkpoint 1 market census outputs"
+          git push origin HEAD:checkpoint-1/market-census-2026-09-30
