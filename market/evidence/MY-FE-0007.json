@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0007",
+  "checked_at": "2026-09-30T03:03:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://www.linkedin.com/jobs/view/4445718197/",
+  "source": "LinkedIn - Coforge",
+  "status_evidence": "LinkedIn displayed an Apply action for the Kuala Lumpur FinOps Engineer posting when checked.",
+  "title_evidence": "Observed listing title contains the contiguous phrase FinOps Engineer.",
+  "location_evidence": "Observed location is Federal Territory of Kuala Lumpur, Malaysia.",
+  "notes": "A second LinkedIn rendering used Cloud FinOps Engineer / Infrastructure Cost & FinOps Engineer wording but shared the same LinkedIn job ID, so it is treated as one requisition."
+}
