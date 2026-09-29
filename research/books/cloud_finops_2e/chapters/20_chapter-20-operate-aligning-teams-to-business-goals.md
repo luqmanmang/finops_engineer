@@ -3,173 +3,197 @@
 > **Role:** Derived textbook source-of-truth note.  
 > **Book source locator:** `OEBPS/ch20.xhtml`  
 > **Source word count:** 3,258  
-> **Copyright boundary:** This note records structure and derived analysis; it does not reproduce the chapter body.
+> **Source boundary:** Paraphrased from the owned EPUB; 2026 Framework reconciliation is labelled separately.
 
 ## 1. Chapter Brief
 
-_TODO — explain the chapter's purpose, scope, and why it matters to a FinOps Engineer._
+This chapter explains how FinOps turns analysis into organizational action through staffing, onboarding, responsibility, visibility, incentives, escalation and repeatable operating processes.
 
 ## 2. Why This Chapter Matters
 
-_TODO — connect the chapter to operational/business decisions._
+A savings recommendation has zero realized business value until somebody owns it, implements it and validates the result. Operate is the phase that converts information and optimization ideas into outcomes.
 
 ## 3. Source Section Map
 
-- Chapter 20. Operate: Aligning Teams to Business Goals  `[OEBPS/ch20.xhtml]`
-- Achieving Goals  `[OEBPS/ch20.xhtml]`
-- Staffing and Augmenting Your FinOps Team  `[OEBPS/ch20.xhtml]`
-- Processes  `[OEBPS/ch20.xhtml]`
-        - Tip  `[OEBPS/ch20.xhtml]`
-- Onboarding  `[OEBPS/ch20.xhtml]`
-      - Stories from the Cloud—Mike  `[OEBPS/ch20.xhtml]`
-- Responsibility  `[OEBPS/ch20.xhtml]`
-        - Tip  `[OEBPS/ch20.xhtml]`
-- Visibility  `[OEBPS/ch20.xhtml]`
-- Action  `[OEBPS/ch20.xhtml]`
-- How Do Responsibilities Help Culture?  `[OEBPS/ch20.xhtml]`
-- Carrot Versus Stick Approach  `[OEBPS/ch20.xhtml]`
-        - Tip  `[OEBPS/ch20.xhtml]`
-- Handling Inaction  `[OEBPS/ch20.xhtml]`
-- Putting Operate into Action  `[OEBPS/ch20.xhtml]`
-- Conclusion  `[OEBPS/ch20.xhtml]`
+- Achieving Goals `[OEBPS/ch20.xhtml]`
+- Staffing and Augmenting Your FinOps Team `[OEBPS/ch20.xhtml]`
+- Processes / Onboarding `[OEBPS/ch20.xhtml]`
+- Responsibility / Visibility / Action `[OEBPS/ch20.xhtml]`
+- Culture and Responsibilities `[OEBPS/ch20.xhtml]`
+- Carrot Versus Stick `[OEBPS/ch20.xhtml]`
+- Handling Inaction `[OEBPS/ch20.xhtml]`
+- Putting Operate into Action `[OEBPS/ch20.xhtml]`
 
 ## 4. Core Concepts
 
-_TODO — derived concept definitions, relationships, terminology, and mental models._
+- Operate means action and continuous improvement, not reporting alone.
+- Responsibility must be explicit: workload owner, recommendation owner, approver and outcome owner.
+- Visibility should be role-appropriate and delivered where teams already work.
+- Positive enablement generally scales better than central cost-policing alone.
+- Inaction needs a defined escalation path when financial/policy risk is material.
+- Team/process design must evolve as FinOps scope and organizational maturity grow.
 
 ## 5. Detailed Explanation
 
-_TODO — explain each major section in your own words, preserving the source's organization and intent._
+### SOURCE-DERIVED
+
+The chapter links goals to people and process. Onboarding creates awareness; responsibility and visibility create accountability; action and escalation keep the practice moving.
+
+### PROJECT EXPLANATION
+
+The repo operationalizes this with a recommendation lifecycle. A recommendation should carry owner, expected impact, confidence, risk, evidence, due date, approval state, implementation timestamp, validation window and realized outcome.
 
 ## 6. Examples
 
-_TODO — paraphrase source examples where useful, then add clearly labelled project examples._
+- A rightsizing finding becomes a ticket with owner, expected savings, SLO guardrail and validation date.
+- A monthly digest is insufficient if each team cannot see which actions are theirs and why they matter.
+- A repeatedly ignored material budget breach follows an agreed escalation path rather than ad hoc pressure.
 
-## 7. Justification / Why the Approach Works
+## 7. Justification
 
-_TODO — why the book recommends or motivates the approach; separate source-derived rationale from project analysis._
+FinOps is cross-functional. Explicit decision rights and workflow reduce the gap between “identified opportunity” and “implemented outcome,” while also preserving valid reasons to reject unsafe or low-value recommendations.
 
 ## 8. Senior FinOps Approach
 
-_TODO — how a senior IC should frame the decision before acting._
+1. Define business goals and decision rights.
+2. Establish RACI for FinOps, Engineering, Finance, Procurement, Product and Leadership.
+3. Create recommendation states and SLAs.
+4. Onboard teams with ownership metadata, dashboards and training.
+5. Deliver actions in existing engineering/business workflows.
+6. Capture approvals, rejections and reasons.
+7. Validate implemented changes technically, financially and against business/SLA goals.
+8. Escalate material inaction only according to agreed policy.
+9. Review operating cadence and maturity continuously.
 
 ## 9. Step-by-Step Execution
 
 ```text
-CONTEXT
-→ BUSINESS QUESTION
-→ DATA REQUIRED
-→ HYPOTHESIS
-→ ANALYSIS
-→ OPTIONS
-→ DECISION
-→ IMPLEMENTATION
-→ TECHNICAL VALIDATION
-→ FINANCIAL VALIDATION
-→ BUSINESS / SLA VALIDATION
+GOAL
+→ OWNER / RACI
+→ EVIDENCE
+→ RECOMMENDATION
+→ REVIEW
+→ APPROVE / REJECT
+→ IMPLEMENT
+→ VALIDATE
+→ REALIZED OUTCOME
 → GUARDRAIL
+→ CADENCE / ESCALATION
 ```
-
-_TODO — specialize this sequence for the chapter._
 
 ## 10. Decision Rules
 
-_TODO — when to use approach A/B, thresholds, escalation criteria, and decision ownership._
+- The central FinOps team enables and governs; workload owners implement most technical changes.
+- A recommendation may be rejected for valid SLA/security/business reasons; retain the rationale.
+- Escalation is based on materiality/risk and policy, not disagreement alone.
+- Automation may reduce friction but should not remove human approval where blast radius demands it.
 
 ## 11. Trade-offs
 
-_TODO — cost, performance, reliability, SLA, speed, lock-in, and organizational trade-offs._
+- Centralization improves consistency but can distance decisions from workload context.
+- Decentralization improves context but may fragment standards.
+- Strong enforcement increases compliance but can damage trust if business exceptions are ignored.
+- High-touch review improves quality but reduces scalability.
 
 ## 12. Failure Modes / Edge Cases
 
-_TODO — common mistakes, ambiguous cases, and conditions where the chapter's default approach may fail._
+- Dashboard-only FinOps with no action workflow.
+- Missing technical/business owner metadata.
+- Treating every recommendation as mandatory.
+- Measuring potential savings as realized savings.
+- Escalation without agreed policy.
+- Cost-policing that damages Engineering trust.
+- No post-change validation.
 
 ## 13. Data Required
 
-_TODO — cost, usage, pricing, ownership, utilization, business-driver, contract, and operational data._
+- recommendation backlog and states
+- owner/RACI
+- expected savings and confidence
+- implementation status/timestamps
+- rejection reason
+- actual post-change cost
+- SLA/performance evidence
+- ticket aging and due dates
+- budget/forecast context
 
 ## 14. SQL / Python / IaC Application
 
-_TODO — analyses and automation that belong in SQL, Python, Terraform/CI/CD, or are not applicable._
+SQL supports recommendation aging/funnel/outcome analysis. Python can automate routing, dedupe, enrichment and validation evidence. IaC/CI/CD implements approved preventive controls but should retain exception and audit paths.
 
 ## 15. Provider Implementation
 
-### AWS
-_TODO_
-
-### Azure
-_TODO_
-
-### Microsoft Fabric
-_TODO where relevant_
-
-### Snowflake
-_TODO where relevant_
-
-### Databricks
-_TODO where relevant_
+AWS/Azure/data-platform recommendations are inputs, not the operating model. Normalize provider findings into one governed workflow rather than expecting teams to monitor multiple portals independently.
 
 ## 16. Stakeholder Perspective
 
-- Engineering — _TODO_
-- Finance — _TODO_
-- Procurement — _TODO_
-- Leadership / Business — _TODO_
-- FinOps — _TODO_
+Engineering implements workload changes; Finance validates planning context; Procurement owns commercial actions; Product/Leadership resolve value/risk trade-offs; FinOps orchestrates evidence and workflow.
 
 ## 17. Validation
 
-- Technical validation — _TODO_
-- Financial validation — _TODO_
-- Business / SLA validation — _TODO_
+- Technical: intended behavior changed without unacceptable regression.
+- Financial: actual cost delta reconciles.
+- Business: original goal remains satisfied.
+- Process: ownership, timestamps and evidence are retained.
 
 ## 18. KPIs
 
-_TODO — metrics that prove progress/outcome, including denominator and grain._
+- recommendation acceptance rate
+- implementation rate
+- median time-to-action
+- realized savings / approved opportunity
+- stale recommendation count
+- owner coverage %
+- rollback or SLO-regression rate
 
 ## 19. Guardrails
 
-- Preventive — _TODO_
-- Detective — _TODO_
-- Corrective — _TODO_
+Preventive: RACI, policy thresholds, mandatory ownership.  
+Detective: stale-action and SLA-breach alerts.  
+Corrective: escalation, rollback, re-planning or documented exception.
 
 ## 20. Real-World Implications
 
-_TODO — connect to Grade A/B cases without inventing undisclosed company behavior._
+Grade A/B cases should distinguish measured realized outcomes from recommendation opportunity. Operating details not disclosed by source remain undisclosed.
 
 ## 21. FinOps Framework 2026 Reconciliation
 
-_TODO — mark concepts as CURRENT / EVOLVED / SUPERSEDED / NEEDS RECONCILIATION._
+**CURRENT.** Inform, Optimize and Operate remain current phases. The chapter also maps strongly to the 2026 **Manage the FinOps Practice** domain and **FinOps Practice Operations** capability, which formalize team design, stakeholder adoption, culture and decision models.
 
 ## 22. Malaysia N=7 Market Relevance
 
-_TODO — map only to verified vacancy signals; retain N=7 limitation._
+Strongly aligned to governance, stakeholder and operating-model signals in the N=7 snapshot. N=7 is a small sample, so use it to prioritize learning rather than estimate the whole market.
 
 ## 23. Lab Mapping
 
-_TODO — lab(s), synthetic fault(s), expected evidence, teardown/cost controls._
+Build a recommendation ledger: Pending → Reviewed → Approved → Implemented → Validated / Rejected. Include RACI, SLA, expected vs realized savings, rejection reason, escalation and synthetic stale items.
 
 ## 24. Power BI Mapping
 
-_TODO — Diagnose → Hypothesis → Finding → Solution → Validation → Insight views/measures._
+Recommendation funnel, aging, owner workload, potential vs approved vs realized value, rejection reasons, SLA breaches and post-change validation.
 
 ## 25. Interview Mapping
 
 ### 30-second answer
-_TODO_
 
-### 2-minute answer
-_TODO_
+I do not call a FinOps recommendation successful when I find it. I attach clear ownership, expected impact, risk and validation criteria, route it into the team's workflow, capture approval or rejection reasons, and only claim realized savings after implementation plus financial and SLA validation.
+
+### 2-minute structure
+
+`FINDING → OWNER → DECISION → IMPLEMENT → VALIDATE → REALIZE → GUARDRAIL`
 
 ### Senior follow-up
-_TODO — WHAT / WHY / WHEN / HOW / TRADEOFF / VALIDATION / BUSINESS IMPACT._
+
+Explain how you handle a technically valid rejection, how you escalate inaction, and how you separate opportunity from realized value.
 
 ## 26. Key Takeaways
 
-_TODO — concise derived takeaways._
+- Analysis without action is not mature FinOps.
+- Ownership and workflow are part of the technical solution.
+- Rejection can be valid; rationale must be preserved.
+- Realized outcomes require post-change validation.
 
 ## 27. Source Locator
 
-- EPUB file: `OEBPS/ch20.xhtml`
-- Section headings and anchors are preserved above for traceability.
-- Body text is intentionally not copied into this repository artifact.
+- EPUB: `OEBPS/ch20.xhtml`
+- 2026 Framework reconciliation is separate from textbook-derived content.
