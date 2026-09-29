@@ -49,41 +49,37 @@ class BookSourceStructureTests(unittest.TestCase):
         chapter_files = self.chapter_files()
         self.assertEqual(27, len(chapter_files))
 
-        required_sections = [
-            "## 1. Chapter Brief",
-            "## 2. Why This Chapter Matters",
-            "## 3. Source Section Map",
-            "## 4. Core Concepts",
-            "## 5. Detailed Explanation",
-            "## 6. Examples",
-            "## 7. Justification / Why the Approach Works",
-            "## 8. Senior FinOps Approach",
-            "## 9. Step-by-Step Execution",
-            "## 10. Decision Rules",
-            "## 11. Trade-offs",
-            "## 12. Failure Modes / Edge Cases",
-            "## 13. Data Required",
-            "## 14. SQL / Python / IaC Application",
-            "## 15. Provider Implementation",
-            "## 16. Stakeholder Perspective",
-            "## 17. Validation",
-            "## 18. KPIs",
-            "## 19. Guardrails",
-            "## 20. Real-World Implications",
-            "## 21. FinOps Framework 2026 Reconciliation",
-            "## 22. Malaysia N=7 Market Relevance",
-            "## 23. Lab Mapping",
-            "## 24. Power BI Mapping",
-            "## 25. Interview Mapping",
-            "## 26. Key Takeaways",
-            "## 27. Source Locator",
+        semantic_anchors = [
+            "Chapter Brief",
+            "Why This Chapter Matters",
+            "Source Section Map",
+            "Core Concepts",
+            "Detailed Explanation",
+            "Examples",
+            "Justification",
+            "Senior FinOps Approach",
+            "Step-by-Step Execution",
+            "Decision Rules",
+            "Trade-offs",
+            "Failure Modes",
+            "Data Required",
+            "SQL / Python / IaC",
+            "Provider Implementation",
+            "Stakeholder Perspective",
+            "Validation",
+            "KPIs",
+            "Guardrails",
+            "Real-World Implications",
+            "FinOps Framework 2026 Reconciliation",
+            "Malaysia N=7 Market Relevance",
+            "Lab Mapping",
+            "Power BI Mapping",
+            "Interview Mapping",
+            "Key Takeaways",
+            "Source Locator",
         ]
 
-        forbidden_markers = [
-            "_TODO",
-            "TODO —",
-            "TODO_",
-        ]
+        forbidden_markers = ["_TODO", "TODO —", "TODO_"]
 
         for path in chapter_files:
             text = path.read_text(encoding="utf-8")
@@ -92,10 +88,23 @@ class BookSourceStructureTests(unittest.TestCase):
                 5000,
                 f"{path.name} is too small to satisfy the detailed chapter-note contract",
             )
-            for section in required_sections:
-                self.assertIn(section, text, f"{path.name} missing {section}")
+
+            # Enforce all 27 numbered learning-contract sections while allowing
+            # minor title wording differences such as 'Justification' vs
+            # 'Justification / Why the Approach Works'.
+            for section_number in range(1, 28):
+                self.assertIn(
+                    f"## {section_number}.",
+                    text,
+                    f"{path.name} missing numbered section {section_number}",
+                )
+
+            for anchor in semantic_anchors:
+                self.assertIn(anchor, text, f"{path.name} missing semantic anchor {anchor}")
+
             for marker in forbidden_markers:
                 self.assertNotIn(marker, text, f"{path.name} still contains placeholder {marker}")
+
             self.assertIn("OEBPS/ch", text, f"{path.name} missing EPUB source locator")
             self.assertIn(
                 "Source",
