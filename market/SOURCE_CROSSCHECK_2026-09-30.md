@@ -20,11 +20,11 @@ Absence from a lower-priority platform does not invalidate a live higher-priorit
 
 ### JobStreet Malaysia
 
-The exact-title pass surfaced the canonical ExxonMobil and NTT DATA FinOps Engineer roles. NTT DATA also appeared under two employer-name renderings with materially identical text; those are treated as one requisition, not two vacancies.
+The exact-title pass surfaced the canonical ExxonMobil and NTT DATA FinOps Engineer roles. NTT DATA also appeared under multiple employer-name renderings with materially identical text; those are treated as one requisition, not separate vacancies.
 
 ### Indeed Malaysia
 
-The exact-title/employer pass confirmed ExxonMobil and Xsolla. Indeed currently shows a Coforge `FinOps Analyst (Hybrid Infrastructure)` role, but the direct LinkedIn Coforge requisition `4445718197` remains a separate live `FinOps Engineer` role and therefore remains canonical.
+The pass independently corroborated ExxonMobil and Xsolla. Encora's `Cloud Project Manager – FinOps engineer` was also surfaced and independently corroborated by Maukerja. Indeed currently shows a Coforge `FinOps Analyst (Hybrid Infrastructure)` role, but the direct LinkedIn Coforge requisition `4445718197` remains a separate live `FinOps Engineer` role and therefore remains canonical.
 
 ### Google Careers / Google-indexed search
 
@@ -35,12 +35,14 @@ Google Careers is Google's own employer career portal, not a universal job-board
 | ID | Company | Exact-title source | JobStreet | Indeed | Official/direct employer source | Cross-check result |
 |---|---|---|---|---|---|---|
 | MY-FE-0001 | ExxonMobil | Official ExxonMobil Careers | Confirmed | Confirmed | Confirmed official careers page | Strongly confirmed |
-| MY-FE-0002 | NTT DATA Services | NTT DATA careers / JobStreet | Confirmed | Not surfaced in dedicated pass | Direct NTT careers URL retained in evidence | Confirmed; JobStreet independently corroborates |
-| MY-FE-0003 | Xsolla | Xsolla Lever Careers | Not surfaced in dedicated pass | Confirmed | Confirmed official Lever/careers page | Strongly confirmed |
-| MY-FE-0006 | International SOS | Direct-employer LinkedIn requisition | Not surfaced | Not surfaced | Public International SOS Malaysia careers list did not surface the role during recheck | Conflicting visibility; LinkedIn evidence retained and conflict documented |
-| MY-FE-0007 | Coforge | Direct LinkedIn job ID 4445718197 | Not surfaced | Different `FinOps Analyst` requisition surfaced | LinkedIn requisition remained live with Apply and exact title | Confirmed as a distinct exact-title requisition |
-| MY-FE-0008 | Encora | Regional job-board listing | Not surfaced | Not surfaced | No accessible employer ATS page found in this pass | Confirmed through current regional listing; medium evidence strength |
-| MY-FE-0009 | Softenger | Current regional listing + Softenger recruiter signal | Not surfaced | Not surfaced | Softenger careers confirms Malaysia hiring locations but does not expose the exact role list | Confirmed through current recruiter/listing evidence; medium evidence strength |
+| MY-FE-0002 | NTT DATA Services | NTT DATA Careers | Confirmed | Not surfaced in dedicated pass | Confirmed official careers page, Req ID 387488 | Strongly confirmed; LinkedIn also corroborates |
+| MY-FE-0003 | Xsolla | Xsolla Lever Careers | Not surfaced in dedicated pass | Confirmed | Confirmed official Lever/careers page | Strongly confirmed; LinkedIn Malaysia index also corroborates |
+| MY-FE-0006 | International SOS | Direct-employer LinkedIn requisition | Not surfaced | Not surfaced | Public International SOS careers recheck did not surface the role | Conflicting visibility; LinkedIn evidence retained and conflict documented |
+| MY-FE-0007 | Coforge | Direct LinkedIn job ID 4445718197 | Not surfaced | Separate `FinOps Analyst` requisition surfaced | LinkedIn requisition remained live with Apply, exact title and Kuala Lumpur location | Confirmed as a distinct exact-title requisition |
+| MY-FE-0008 | Encora | Indeed exact composite title | Not surfaced | Confirmed | No accessible employer ATS page found in this pass | Confirmed by Indeed and Maukerja; recruiter post separately lists Kuala Lumpur FinOps Engineer hiring |
+| MY-FE-0009 | Softenger | Current regional listing | Not surfaced | Not surfaced | Softenger recruiter signal corroborates the exact title | Confirmed through active Apply Now listing plus recruiter corroboration |
+
+A machine-readable companion is stored as `market/source_crosscheck_matrix.csv`.
 
 ## Non-canonical audit records
 
@@ -49,6 +51,6 @@ Google Careers is Google's own employer career portal, not a universal job-board
 
 ## Interpretation
 
-The dedicated JobStreet, Indeed and Google/Google-indexed pass did not reveal a hidden population approaching 50 unique qualifying vacancies. It mainly corroborated existing canonical roles, exposed duplicate employer-name renderings, and highlighted source-visibility differences between platforms.
+The dedicated JobStreet, Indeed and Google/Google-indexed pass did not reveal a hidden population approaching 50 unique qualifying vacancies. It mainly corroborated existing canonical roles, exposed duplicate employer-name renderings, separated adjacent-title requisitions from exact-title requisitions, and highlighted source-visibility differences between platforms.
 
 The canonical population therefore remains `N = 7` for this snapshot. The census must not be inflated by counting the same requisition once per platform or by replacing the locked exact-title rule with adjacent FinOps titles.
