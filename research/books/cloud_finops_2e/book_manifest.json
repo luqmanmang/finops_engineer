@@ -1,0 +1,3357 @@
+{
+  "metadata": {
+    "identifier": "9781492098355",
+    "title": "Cloud FinOps",
+    "language": "en",
+    "publisher": "O'Reilly Media, Inc.",
+    "date": "2023-01-25",
+    "creator": "J.R. Storment and Mike Fuller"
+  },
+  "chapter_count": 27,
+  "total_words": 137807,
+  "chapters": [
+    {
+      "number": 1,
+      "source_file": "OEBPS/ch01.xhtml",
+      "title": "Chapter 1. What Is FinOps?",
+      "slug": "chapter-1-what-is-finops",
+      "word_count": 6130,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 1. What Is FinOps?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Defining the Term “FinOps”",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The FinOps Hero’s Journey",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Where Did FinOps Come From?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 1-1. Search requests for the term “FinOps” between 2018 and 2022 (source: speakeasystrategies.com )",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 1-2. Analyst articles mentions of different names for FinOps (source: speakeasystrategies.com )",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 1-3. Count of people on LinkedIn listing FinOps as a skill set",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—J.R.",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Data-Driven Decision Making",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Real-Time Feedback (aka the “Prius Effect”)",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—J.R.",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Core Principles of FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "When Should You Start FinOps?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Starting with the End in Mind: Data-Driven Decision Making",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Jason Fuller",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "source_file": "OEBPS/ch02.xhtml",
+      "title": "Chapter 2. Why FinOps?",
+      "slug": "chapter-2-why-finops",
+      "word_count": 3386,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 2. Why FinOps?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Use Cloud for the Right Reasons",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 2-1. Cloud value proposition from the FinOps Certified Professional course",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Cloud Spend Keeps Accelerating",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Impact of Not Adopting FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 2-2. Organizations should sustain their FinOps investment as long as it is justified by improvements in cloud business value (from the FinOps Certified Professional course)",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Informed Ignoring: Why Start Now?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 2-3. The lift-and-shift shot clock illustration by Forrest Brazeal published by ACloudGuru , February 2020",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 2-4. Stack ranked list of the top FinOps Framework capabilities show that cost allocation and data analysis and showback are the most important parts of a FinOps practice (source: 2022 State of FinOps report )",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "source_file": "OEBPS/ch03.xhtml",
+      "title": "Chapter 3. Cultural Shift and the FinOps Team",
+      "slug": "chapter-3-cultural-shift-and-the-finops-team",
+      "word_count": 6621,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 3. Cultural Shift and the FinOps Team",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Deming on Business Transformation",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Who Does FinOps?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Why a Centralized Team?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The FinOps Team Doesn’t Do FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Role of Each Team in FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 3-1. Team interaction around FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Executives and Leadership",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Engineering and Developers",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Finance",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Procurement and Sourcing",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Product or Business Teams",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "FinOps Practitioners",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A New Way of Working Together",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Where Does Your FinOps Team Report?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 3-2. Most common executive FinOps reports to, from the 2022 State of FinOps report",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Understanding Motivations",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Engineers",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Finance People",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Executives and Leadership",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Procurement and Sourcing People",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "FinOps Throughout Your Organization",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Rob Martin",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Hiring for FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "FinOps Culture in Action",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Difficulty Motivating People Is Not New",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 3-3. Survey responses in the FinOps Foundation State of FinOps 2022 survey, showing motivating engineers as the top challenge",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 3-4. The action scale",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Contributors to Action",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Detractors from Action",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Tipping the Scales in Your Favor",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "source_file": "OEBPS/ch04.xhtml",
+      "title": "Chapter 4. The Language of FinOps",
+      "slug": "chapter-4-the-language-of-finops",
+      "word_count": 3561,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 4. The Language of FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Defining a Common Lexicon",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Defining the Basic Terms",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Defining Finance Terms for Cloud Professionals",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "When COGS Can Become Capitalized Assets",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Abstraction Assists Understanding",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—J.R.",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Cloud Language Versus Business Language",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Creating a Universal Translator Between Your DevOps and Finance Teams",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Need to Educate All the Disciplines",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Benchmarking and Gamification",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "source_file": "OEBPS/ch05.xhtml",
+      "title": "Chapter 5. Anatomy of the Cloud Bill",
+      "slug": "chapter-5-anatomy-of-the-cloud-bill",
+      "word_count": 5658,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 5. Anatomy of the Cloud Bill",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Types of Cloud Bill",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Cloud Billing Complexity",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Basic Format of Billing Data",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 5-1. Sample line from the AWS CUR billing data",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "A Simple Formula for Spending",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Time, Why Do You Punish Me?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Sum of the Tiny Parts",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Brief History of Cloud Billing Data",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Importance of Hourly Data",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Month Is Not a Month",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Dollar Is Not a Dollar",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Two Levers to Affect Your Bill",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Who Should Avoid Costs and Who Should Reduce Rates?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Centralizing Rate Reduction",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 5-2. Phase shift overlap",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Why You Should Decentralize Usage Reduction",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "source_file": "OEBPS/ch06.xhtml",
+      "title": "Chapter 6. Adopting FinOps",
+      "slug": "chapter-6-adopting-finops",
+      "word_count": 7720,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 6. Adopting FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 6-1. The FinOps Adoption Roadmap , original source Mike Eisenstein and Dean Oliver (Accenture, LLP)",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Confession",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Different Executive Pitches for Different Levels",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Starting Pitch",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Advancing Pitch",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Sample Headcount Plan for Advancing a FinOps Team",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—RJ Hazra",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Pitching the Executive Sponsor",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Playing to Your Audience",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Key Personas That the Driver Must Influence",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 6-2. Persona interactions with the FinOps driver",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "CEO Persona",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "CTO/CIO Persona",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "CFO Persona",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Engineering Lead Persona",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Roadmap for Getting Adoption of FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Stage 1: Planning for FinOps in an Organization",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Do your research",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Create a plan",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Jason Rhoades",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Gather support",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Perform initial resourcing",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Stage 2: Socializing FinOps for Adoption in an Organization",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Communicate value",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Gather team feedback",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Define initial FinOps model",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Stage 3: Preparing the Organization for FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Assess FinOps readiness",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Engage stakeholders",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Type of Alignment to the Organization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Full Time, Part Time, Borrowed Time: A Note on Resources",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Complex System Designed from Scratch Never Works",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "source_file": "OEBPS/ch07.xhtml",
+      "title": "Chapter 7. The FinOps Foundation Framework",
+      "slug": "chapter-7-the-finops-foundation-framework",
+      "word_count": 2932,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 7. The FinOps Foundation Framework",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "An Operating Model for Your Practice",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Framework Model",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 7-1. The FinOps Foundation Framework poster 2022 available online",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Principles",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Personas",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Maturity",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Phases",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Domains and Capabilities",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Structure of a Domain",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Structure of Capabilities",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Definition",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Maturity assessment",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Assessment lenses",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Functional activities",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Measures of success",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Inputs",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Adapting the Framework to Fit Your Needs",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Connection to Other Frameworks/Models",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "source_file": "OEBPS/ch08.xhtml",
+      "title": "Chapter 8. The UI of FinOps",
+      "slug": "chapter-8-the-ui-of-finops",
+      "word_count": 10497,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 8. The UI of FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Build Versus Buy Versus Native",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "When to Use Native Tooling",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "When to Build",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Why to Buy",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Operationalized Reporting",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Data Quality",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 8-1. Cloud cost data showing a drop in the most recent days due to delays on data delivery",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Perfect Is the Enemy of Good",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Report Tiering",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Jason Rhoades",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Rolling Out Changes",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "The Universal Report",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Accessibility",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Color",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Visual Hierarchy",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Usability and Consistency",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Language",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Consistency of Color and Visual Representation",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Recognition Versus Recall",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Psychological Concepts",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Anchoring Bias",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 8-2. Example weekly FinOps report to be presented to a team",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Confirmation Bias",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "The Von Restorff Effect",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 8-3. Service costs including weekly difference",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Hick’s Law",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 8-4. The AWS Compute Optimizer console, showing recommendations for rightsizing an EC2 instance",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Perspectives on Reports",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Personas",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Maturity",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Multicloud",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Putting Data in the Path of Each Persona",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Data in the Path of Finance",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Data in the Path of Leadership",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Data in the Path of Engineers",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Connecting FinOps to the Rest of the Business",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Seek First to Understand",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Jason Rhoades",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "source_file": "OEBPS/ch09.xhtml",
+      "title": "Chapter 9. The FinOps Lifecycle",
+      "slug": "chapter-9-the-finops-lifecycle",
+      "word_count": 2978,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 9. The FinOps Lifecycle",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Six Principles of FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#1: Teams Need to Collaborate",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#2: Decisions Are Driven by the Business Value of Cloud",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#3: Everyone Takes Ownership of Their Cloud Usage",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#4: FinOps Reports Should Be Accessible and Timely",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#5: A Centralized Team Drives FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#6: Take Advantage of the Variable Cost Model of the Cloud",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The FinOps Lifecycle",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 9-1. The FinOps lifecycle",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Inform",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Optimize",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Operate",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Considerations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Where Do You Start?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "You Don’t Have to Find All the Answers",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 9-2. A real conversation about the results of cost visibility",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "source_file": "OEBPS/ch10.xhtml",
+      "title": "Chapter 10. Inform Phase: Where Are You Right Now?",
+      "slug": "chapter-10-inform-phase-where-are-you-right-now",
+      "word_count": 3569,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 10. Inform Phase: Where Are You Right Now?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Data Is Meaningless Without Context",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Seek First to Understand",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Organizational Work During This Phase",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Transparency and the Feedback Loop",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Benchmarking Team Performance",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What Great Looks Like",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "source_file": "OEBPS/ch11.xhtml",
+      "title": "Chapter 11. Allocation: No Dollar Left Behind",
+      "slug": "chapter-11-allocation-no-dollar-left-behind",
+      "word_count": 4501,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 11. Allocation: No Dollar Left Behind",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Why Allocation Matters",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Amortization: It’s Accrual World",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 11-1. Monthly costs with and without amortization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Creating Goodwill and Auditability with Accounting",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The “Spend Panic” Tipping Point",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 11-2. Spend growth with significant events",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Warning",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Spreading Out Shared Costs",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Chargeback Versus Showback",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Rob Martin",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "A Combination of Models Fit for Purpose",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Accounts, Tagging, Account Organization Hierarchies",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Showback Model in Action",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Chargeback and Showback Considerations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "source_file": "OEBPS/ch12.xhtml",
+      "title": "Chapter 12. Tags, Labels, and Accounts, Oh My!",
+      "slug": "chapter-12-tags-labels-and-accounts-oh-my",
+      "word_count": 5587,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 12. Tags, Labels, and Accounts, Oh My!",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Tag- and Hierarchy-Based Approaches",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Getting Started with Your Strategy",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Communicate Your Plan",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Keep It Simple",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Formulate Your Questions",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Comparing the Allocation Options of the Big Three",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Comparing Accounts and Folders Versus Tags and Labels",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 12-1. Common cost allocation strategy for AWS accounts",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Organizing Accounts and Projects into Groups",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 12-2. Cost allocation inside Google Cloud",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Tags and Labels: The Most Flexible Allocation Option",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 12-3. Tags on cloud resources",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Using Tags for Billing",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Warning",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Getting Started Early with Tagging",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Deciding When to Set Your Tagging Standard",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Picking the Right Number of Tags",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Working Within Tag/Label Restrictions",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Maintaining Tag Hygiene",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Reporting on Tag Performance",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Getting Teams to Implement Tags",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "source_file": "OEBPS/ch13.xhtml",
+      "title": "Chapter 13. Accurate Forecasting",
+      "slug": "chapter-13-accurate-forecasting",
+      "word_count": 5656,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 13. Accurate Forecasting",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The State of Cloud Forecasting",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Forecasting Methodologies",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-1. Naive forecasting assumes your next period of spend will mirror the last",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-2. Trend-based forecasting",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-3. Driver-based forecasting",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Forecasting Models",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Cloud Forecasting Challenges",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Manual Versus Automated Forecasts",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Inaccuracies",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Granularity",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-4. An example cloud spend hierarchy",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Forecast Frequency",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Communication",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Future Projects",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Warning",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Bharat Chadha",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Cost Estimation",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Impacts of Cost Optimization on Forecasts",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-5. Sample cloud spend with FinOps activities starting in 2022-05",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Drew Lowe",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Forecast and Budgeting",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 13-6. A single graph showing the six-month forecast, projected budgets, and actual budgets/use for the previous six months",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Importance of Managing Teams to Budgets",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "source_file": "OEBPS/ch14.xhtml",
+      "title": "Chapter 14. Optimize Phase: Adjusting to Hit Goals",
+      "slug": "chapter-14-optimize-phase-adjusting-to-hit-goals",
+      "word_count": 4115,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 14. Optimize Phase: Adjusting to Hit Goals",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Why Do You Set Goals?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The First Goal Is Good Cost Allocation",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Is Savings the Goal?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Iron Triangle: Good, Fast, Cheap",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 14-1. The Iron Triangle",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Hitting Goals with OKRs",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "OKR Focus Area #1: Credibility",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "OKR Focus Area #2: Maintainable",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "OKR Focus Area #3: Control",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Goals as Target Lines",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 14-2. Graph of daily spend over a few months",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 14-3. Graph of daily spend over a few months with the addition of a target line",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Budget Variances",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Using Less Versus Paying Less",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "source_file": "OEBPS/ch15.xhtml",
+      "title": "Chapter 15. Using Less: Usage Optimization",
+      "slug": "chapter-15-using-less-usage-optimization",
+      "word_count": 10797,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 15. Using Less: Usage Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Cold Reality of Cloud Consumption",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Where Does Waste Come From?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Usage Reduction by Removing/Moving",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Usage Reduction by Resizing (Rightsizing)",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Benjamin Coles",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Common Rightsizing Mistakes",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Relying on Recommendations That Use Only Averages or Peaks",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 15-1. Graphs showing two CPU workloads: one has a short 90%+ peak and then remains at <10% for the rest of the hour, while the other is consistently at 20%",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Failing to Rightsize Beyond Compute",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Not Addressing Your Resource “Shape”",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Not Simulating Performance Before Rightsizing",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 15-2. Resizing based on averages will cause clipping",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Hesitating Due to Reserved Instance Uncertainty",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Going Beyond Compute: Tips to Control Cloud Costs",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Block Storage",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Get rid of orphaned volumes",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Focus on zero throughput or zero IOPS",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Make managing your block storage costs a priority",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Reduce the number of higher IOPS volumes",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Take advantage of elastic volumes",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Object Storage",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Implement data retention policies",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Choose a storage tier/class that matches the data",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Networking",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Clean up unused IP addresses",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Optimize network routes",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Usage Reduction by Redesigning",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Scaling",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Scheduled Operations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Effects on Reserved Instances",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Benefit Versus Effort",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Serverless Computing",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Not All Waste Is Waste",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Maturing Usage Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Advanced Workflow: Automated Opt-Out Rightsizing",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—FinOps Community",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 15-3. Schedule tracking of optimization tasks",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 15-4. Automated rightsizing workflow",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 15-5. Sample email notification for automated rightsizing",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Tracking Savings",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "source_file": "OEBPS/ch16.xhtml",
+      "title": "Chapter 16. Paying Less: Rate Optimization",
+      "slug": "chapter-16-paying-less-rate-optimization",
+      "word_count": 2705,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 16. Paying Less: Rate Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Compute Pricing",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "On-Demand/Pay-As-You-Go",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Spot Resource Usage",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Commitment-Based Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Storage Pricing",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Volume/Tiered Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Usage-Based",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 16-1. Usage-based volume discount graph",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Time-Based",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 16-2. Time-based volume discount graph",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Negotiated Rates",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Custom Pricing",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Seller Private Offers",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "BYOL Considerations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "source_file": "OEBPS/ch17.xhtml",
+      "title": "Chapter 17. Understanding Commitment-Based Discounts",
+      "slug": "chapter-17-understanding-commitment-based-discounts",
+      "word_count": 9732,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 17. Understanding Commitment-Based Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Introduction to Commitment-Based Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-1. The impact of reservations on cloud spend",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—J.R.",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Commitment-Based Discount Basics",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Compute Instance Size Flexibility",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Conversions and Cancellations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Overview of Usage Commitments Offered by the Big Three",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Amazon Web Services",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "What Does an RI Provide?",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "AWS Commitment Models",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "AWS Reserved Instance",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Member Account Affinity",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-2. Discount interactions with RI sharing",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Standard Versus Convertible RIs",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Instance Size Flexibility",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-3. Conversion of AWS instance sizes to a normalized size with size flexibility",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-4. Application of reservations with ISF",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "AWS Savings Plans",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Savings Bundles",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Microsoft Azure",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Azure Reservations",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Warning",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Instance Size Flexibility",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-5. Conversion of Azure instance sizes to a normalized size with size flexibility",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Azure Savings Plans",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-6. SPs showing under- and overutilization hours (source: Azure documentation )",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Google Cloud",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Google Committed Use Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Paying for Cores, Not Hours, in Google",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Google Billing and Sharing CUDs",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-7. Google project and folder hierarchy",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Google Billing Account and Ownership",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 17-8. Google billing account and ownership",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Applying Google CUDs in a Project",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Google Flexible Committed Use Discounts",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "source_file": "OEBPS/ch18.xhtml",
+      "title": "Chapter 18. Building a Commitment-Based Discount Strategy",
+      "slug": "chapter-18-building-a-commitment-based-discount-strategy",
+      "word_count": 7434,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 18. Building a Commitment-Based Discount Strategy",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Common Mistakes",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Steps to Building a Commitment-Based Discount Strategy",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 1: Learn the Fundamentals of Each Program",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Components of the commitment break-even point",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 18-1. Commitment-based discount cash flow",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "The commitment waterline",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 18-2. Commitment utilization",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 2: Understand Your Level of Commitment to Your Cloud Service Provider",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 3: Build a Repeatable Commitment-Based Discount Process",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 4: Purchase Regularly and Often",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 18-3. Diagram AWS used to host on their website",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 5: Measure and Iterate",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Step 6: Allocate Up-Front Commitment Costs Appropriately",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "How to Manage the Commitment Strategy",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Purchasing Commitments Just-in-Time",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 18-4. Resource usage starting in April and running for nine months",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "When to Rightsize Versus Commit",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "The Zone Approach",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Note",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Who Pays for Commitments?",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Strategy Tips",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "source_file": "OEBPS/ch19.xhtml",
+      "title": "Chapter 19. Sustainability: FinOps Partnering with GreenOps",
+      "slug": "chapter-19-sustainability-finops-partnering-with-greenops",
+      "word_count": 4584,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 19. Sustainability: FinOps Partnering with GreenOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What Are Cloud Carbon Emissions?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Scope 1, 2, and 3 Emissions",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 19-1. Visualization of how different scope emissions stack together and feed into scope 3 emissions as you move up the value chain",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Are Cloud Providers Green?",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Access",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Completeness",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Granularity",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Partnering with Engineers on Sustainability",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 19-2. The cloud sustainability shared responsibility model (contributed by Mark Butcher)",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "FinOps and GreenOps Better Together?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "GreenOps Remediations",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Avoid FinOps Working Against GreenOps",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "source_file": "OEBPS/ch20.xhtml",
+      "title": "Chapter 20. Operate: Aligning Teams to Business Goals",
+      "slug": "chapter-20-operate-aligning-teams-to-business-goals",
+      "word_count": 3258,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 20. Operate: Aligning Teams to Business Goals",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Achieving Goals",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Staffing and Augmenting Your FinOps Team",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Processes",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Onboarding",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Responsibility",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Visibility",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Action",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "How Do Responsibilities Help Culture?",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Carrot Versus Stick Approach",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Handling Inaction",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Putting Operate into Action",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "source_file": "OEBPS/ch21.xhtml",
+      "title": "Chapter 21. Automating Cost Management",
+      "slug": "chapter-21-automating-cost-management",
+      "word_count": 3588,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 21. Automating Cost Management",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Whether to Automate",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What Is the Outcome You Want to Achieve?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Automated Versus Manual Tasks",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Automation Tools",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Costs",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Other Considerations",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Tooling Deployment Options",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Automation Working Together",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Integration",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Automation Conflict",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Safety and Security",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "How to Start",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What to Automate",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Tag Governance",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Scheduled Resource Start/Stop",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Usage Reduction",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "source_file": "OEBPS/ch22.xhtml",
+      "title": "Chapter 22. Metric-Driven Cost Optimization",
+      "slug": "chapter-22-metric-driven-cost-optimization",
+      "word_count": 3094,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 22. Metric-Driven Cost Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Core Principles",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Automated Measurement",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Targets",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Achievable Goals",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Commitment coverage",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-1. Commitment coverage calculated via raw hours",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-2. Commitment coverage calculated via coverable hours",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-3. Commitment coverage calculated via weighted coverable hours",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Savings metrics that make sense for all",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Combining metrics",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-4. Commitment usage over time",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Data Driven",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Metric-Driven Versus Cadence-Driven Processes",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-5. Commitment coverage when performed infrequently",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-6. Commitment coverage when performed frequently",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Setting Targets",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Taking Action",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Bring It All Together",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 22-7. Spending decline after a multipart upload policy is put in place",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "source_file": "OEBPS/ch23.xhtml",
+      "title": "Chapter 23. FinOps for the Container World",
+      "slug": "chapter-23-finops-for-the-container-world",
+      "word_count": 4349,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 23. FinOps for the Container World",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Containers 101",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 23-1. Basic view of a Kubernetes cluster",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Move to Container Orchestration",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "The Container FinOps Lifecycle",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Container Inform Phase",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Cost Allocation",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Container Proportions",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Custom container proportions",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 23-2. Unallocated capacity on a server instance/node",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Container proportions in Google Cloud",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Tags, Labels, and Namespaces",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Container Optimize Phase",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Cluster Placement",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Container Usage Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Centralize the rightsizing of clusters",
+          "anchor": ""
+        },
+        {
+          "level": 3,
+          "title": "Decentralize the rightsizing of containers/pods",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Server Instance Rate Optimization",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Container Operate Phase",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Serverless Containers",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "source_file": "OEBPS/ch24.xhtml",
+      "title": "Chapter 24. Partnering with Engineers to Enable FinOps",
+      "slug": "chapter-24-partnering-with-engineers-to-enable-finops",
+      "word_count": 6532,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 24. Partnering with Engineers to Enable FinOps",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Integrating Us with Them",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What’s on the Mind of the Engineer?",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Abuna Demoz",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Constraints and the Solving of Hard Problems",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Are You Building a Porsche or a Toyota?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Principles for Enabling Cost-Efficient Engineering",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#1: Maximize Value Rather Than Reduce Cost",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "The Quality Equation",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#2: Remember That We Are on the Same Team",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#3: Prioritize Improving Communication",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Benjamin Coles",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#4: Introduce Financial Constraints Early in the Product Development",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#5: Enablement, Not Control",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "#6: Leadership Support Isn’t Helpful, It Is Essential",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Mike",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Data in the Path of the Engineer",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Models for Partnering with Engineering Teams",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Direct Contribution",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Indirect Collaboration",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Indirect Collaboration with Targeted Contribution",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "source_file": "OEBPS/ch25.xhtml",
+      "title": "Chapter 25. Connectivity to Other Frameworks",
+      "slug": "chapter-25-connectivity-to-other-frameworks",
+      "word_count": 2966,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 25. Connectivity to Other Frameworks",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Total Cost of Ownership",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Working with Other Methodologies and Frameworks",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Find Out Who’s Out There",
+          "anchor": ""
+        },
+        {
+          "level": 5,
+          "title": "Stories from the Cloud—Ashley Hromatko",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Make Friends and Share Goals",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Share Influence, Terminology, and Processes",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Share Infrastructure",
+          "anchor": ""
+        },
+        {
+          "level": 2,
+          "title": "Share Knowledge",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "source_file": "OEBPS/ch26.xhtml",
+      "title": "Chapter 26. FinOps Nirvana: Data-Driven Decision Making",
+      "slug": "chapter-26-finops-nirvana-data-driven-decision-making",
+      "word_count": 4696,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 26. FinOps Nirvana: Data-Driven Decision Making",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Unit Economics and Metrics",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Unit Economics Don’t Have to Be About Revenue",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Calculating Unit Economic Metrics",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Tip",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Spending Is Fine, Wasting Is Not",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 26-1. Company with stable revenue and cloud costs",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 26-2. Company revenue and cloud costs during the introduction of a free-tier offering",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 26-3. Monthly active users and company cloud costs during the introduction of a free-tier offering",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Activity-Based Costing",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 26-4. Files rendered over the costs, increased rendering",
+          "anchor": ""
+        },
+        {
+          "level": 6,
+          "title": "Figure 26-5. Files rendered over the costs, increased cost",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Coming Back to the Iron Triangle",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "What’s Missing from the Equation?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "When Have You Won at FinOps?",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Conclusion",
+          "anchor": ""
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "source_file": "OEBPS/ch27.xhtml",
+      "title": "Chapter 27. You Are the Secret Ingredient",
+      "slug": "chapter-27-you-are-the-secret-ingredient",
+      "word_count": 1161,
+      "headings": [
+        {
+          "level": 1,
+          "title": "Chapter 27. You Are the Secret Ingredient",
+          "anchor": ""
+        },
+        {
+          "level": 1,
+          "title": "Call to Action",
+          "anchor": ""
+        }
+      ]
+    }
+  ]
+}

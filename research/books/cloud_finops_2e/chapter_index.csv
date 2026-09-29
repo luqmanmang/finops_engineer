@@ -1,0 +1,28 @@
+chapter,title,source_file,word_count,section_count,markdown_file
+1,Chapter 1. What Is FinOps?,OEBPS/ch01.xhtml,6130,20,chapters/01_chapter-1-what-is-finops.md
+2,Chapter 2. Why FinOps?,OEBPS/ch02.xhtml,3386,10,chapters/02_chapter-2-why-finops.md
+3,Chapter 3. Cultural Shift and the FinOps Team,OEBPS/ch03.xhtml,6621,34,chapters/03_chapter-3-cultural-shift-and-the-finops-team.md
+4,Chapter 4. The Language of FinOps,OEBPS/ch04.xhtml,3561,13,chapters/04_chapter-4-the-language-of-finops.md
+5,Chapter 5. Anatomy of the Cloud Bill,OEBPS/ch05.xhtml,5658,22,chapters/05_chapter-5-anatomy-of-the-cloud-bill.md
+6,Chapter 6. Adopting FinOps,OEBPS/ch06.xhtml,7720,34,chapters/06_chapter-6-adopting-finops.md
+7,Chapter 7. The FinOps Foundation Framework,OEBPS/ch07.xhtml,2932,22,chapters/07_chapter-7-the-finops-foundation-framework.md
+8,Chapter 8. The UI of FinOps,OEBPS/ch08.xhtml,10497,47,chapters/08_chapter-8-the-ui-of-finops.md
+9,Chapter 9. The FinOps Lifecycle,OEBPS/ch09.xhtml,2978,18,chapters/09_chapter-9-the-finops-lifecycle.md
+10,Chapter 10. Inform Phase: Where Are You Right Now?,OEBPS/ch10.xhtml,3569,12,chapters/10_chapter-10-inform-phase-where-are-you-right-now.md
+11,Chapter 11. Allocation: No Dollar Left Behind,OEBPS/ch11.xhtml,4501,16,chapters/11_chapter-11-allocation-no-dollar-left-behind.md
+12,"Chapter 12. Tags, Labels, and Accounts, Oh My!",OEBPS/ch12.xhtml,5587,28,chapters/12_chapter-12-tags-labels-and-accounts-oh-my.md
+13,Chapter 13. Accurate Forecasting,OEBPS/ch13.xhtml,5656,27,chapters/13_chapter-13-accurate-forecasting.md
+14,Chapter 14. Optimize Phase: Adjusting to Hit Goals,OEBPS/ch14.xhtml,4115,17,chapters/14_chapter-14-optimize-phase-adjusting-to-hit-goals.md
+15,Chapter 15. Using Less: Usage Optimization,OEBPS/ch15.xhtml,10797,49,chapters/15_chapter-15-using-less-usage-optimization.md
+16,Chapter 16. Paying Less: Rate Optimization,OEBPS/ch16.xhtml,2705,19,chapters/16_chapter-16-paying-less-rate-optimization.md
+17,Chapter 17. Understanding Commitment-Based Discounts,OEBPS/ch17.xhtml,9732,44,chapters/17_chapter-17-understanding-commitment-based-discounts.md
+18,Chapter 18. Building a Commitment-Based Discount Strategy,OEBPS/ch18.xhtml,7434,27,chapters/18_chapter-18-building-a-commitment-based-discount-strategy.md
+19,Chapter 19. Sustainability: FinOps Partnering with GreenOps,OEBPS/ch19.xhtml,4584,16,chapters/19_chapter-19-sustainability-finops-partnering-with-greenops.md
+20,Chapter 20. Operate: Aligning Teams to Business Goals,OEBPS/ch20.xhtml,3258,17,chapters/20_chapter-20-operate-aligning-teams-to-business-goals.md
+21,Chapter 21. Automating Cost Management,OEBPS/ch21.xhtml,3588,23,chapters/21_chapter-21-automating-cost-management.md
+22,Chapter 22. Metric-Driven Cost Optimization,OEBPS/ch22.xhtml,3094,26,chapters/22_chapter-22-metric-driven-cost-optimization.md
+23,Chapter 23. FinOps for the Container World,OEBPS/ch23.xhtml,4349,23,chapters/23_chapter-23-finops-for-the-container-world.md
+24,Chapter 24. Partnering with Engineers to Enable FinOps,OEBPS/ch24.xhtml,6532,23,chapters/24_chapter-24-partnering-with-engineers-to-enable-finops.md
+25,Chapter 25. Connectivity to Other Frameworks,OEBPS/ch25.xhtml,2966,14,chapters/25_chapter-25-connectivity-to-other-frameworks.md
+26,Chapter 26. FinOps Nirvana: Data-Driven Decision Making,OEBPS/ch26.xhtml,4696,17,chapters/26_chapter-26-finops-nirvana-data-driven-decision-making.md
+27,Chapter 27. You Are the Secret Ingredient,OEBPS/ch27.xhtml,1161,2,chapters/27_chapter-27-you-are-the-secret-ingredient.md
