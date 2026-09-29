@@ -26,8 +26,8 @@ jobs:
       - name: Clone canonical source main
         run: git clone --depth 1 --branch main https://github.com/rajeluqman/finops-engineer.git /tmp/finops-source
 
-      - name: Mirror canonical working tree
-        run: rsync -a --delete --exclude='.git/' /tmp/finops-source/ ./
+      - name: Mirror canonical working tree except workflow files
+        run: rsync -a --delete --exclude='.git/' --exclude='.github/workflows/***' /tmp/finops-source/ ./
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
@@ -35,14 +35,14 @@ jobs:
       - name: Validate market census contracts
         run: python python/market_census/build_market_census.py --validate-only
 
-      - name: Commit exact mirror to target main
+      - name: Commit mirrored content to target main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "Target already matches canonical source."
+            echo "Non-workflow content already matches canonical source."
           else
-            git commit -m "Mirror rajeluqman/finops-engineer main"
+            git commit -m "Mirror canonical FinOps repository content"
             git push origin HEAD:main
           fi
